@@ -14,9 +14,9 @@
                 
                 Experience in Developing python Django web application, java desktop application and Android game using java.</p>
 
-                <div class="progress my-3">
+                <div class="progress my-3"  *ngFor="let skill of skills">
                     <div class="pro-value1">
-                        <p class="">HTML/CSS <span class="text-white float-right">95%</span></p>
+                        <p class="">{{skill.name}}<span class="text-white float-right">{{skill.percentage}}</span></p>
                     </div>
                 </div>
 

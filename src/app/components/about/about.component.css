@@ -1,0 +1,54 @@
+.profilePic {
+    border: 1px solid green;
+    border-radius: 10px;
+    padding: 5px;
+    height: 545px;
+    width: 400px;
+}
+
+.main h3 {
+    font-size: 4.4rem;
+    font-weight: 700;
+}
+
+.main h6 {
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    line-height: 1;
+    border-bottom: 3px solid rgb(233, 20, 109);
+    width: 40%;
+}
+
+.main .btn1 {
+    height: 55px;
+    width: 138px;
+    background-color: rgb(233, 20, 109);
+    color: white;
+    outline: none;
+    border: none;
+    font-weight: bold;
+    border-radius: 5px;
+    margin-right:5px ;
+} 
+
+.main .btn1:hover {
+    background-color: rgb(202, 18, 95);
+    transition: 0.5s;
+}
+
+.main .btn2 {
+    height: 55px;
+    width: 138px;
+    background-color: transparent;
+    color: rgb(233, 20, 109);
+    outline: none;
+    border: 1px solid rgb(233, 20, 109);
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.main .btn2:hover {
+    background-color: rgb(233, 20, 109);
+    transition: 0.5s;
+    color: white;
+}

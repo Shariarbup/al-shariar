@@ -1,0 +1,14 @@
+<section class="education py-5">
+    <div class="container py-2">
+        <h1 class="text-center">Education.</h1>
+            <div class="row mt-5" *ngFor="let edu of educations">
+                <div class="col-lg-6 institute mt-2"  >
+                    <p><span >Institute Type: </span>{{edu.instituteType}}</p>
+                    <p><span >Institute Name: </span>{{edu.instituteName}}</p>
+                    <p><span >Subject: </span>{{edu.subject}}</p>
+                    <p><span >Result: </span>{{edu.gpa}}</p>
+                    <p><span >Passing Year: </span>{{edu.passingYear}}</p>
+                </div>
+            </div>
+    </div>
+</section>

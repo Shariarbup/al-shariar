@@ -1,0 +1,74 @@
+.about h1 {
+    font-size: 3rem;
+    font-weight: 900;
+}
+
+.progress {
+    background-color: rgb(233, 219, 219);
+    justify-content: flex-start;
+    border-radius: 50px;
+    align-items: center;
+    position: relative;
+    display: flex;
+    height: 25px;
+    width: 100%;
+}
+
+.progress .pro-value1 {
+    animation: load1 3s normal forwards;
+    border-radius: 50px;
+    background-color: black;
+    height: 25px;
+    width: 0;
+}
+
+.progress p {
+    color: white;
+    padding: 12px;
+}
+
+@keyframes load1 {
+    0% {
+        width: 0;
+    }
+    
+    100% {
+        width: 98%;
+    }
+}
+
+.btnDownloadCV {
+    height: 40px;
+    width: 145px;
+    outline: none;
+    border: none;
+    background-color: black;
+    color: white;
+    border-radius: 4px;
+    margin-right: 12px ;
+}
+
+.btnDownloadCV:hover {
+    background-color: transparent;
+    color: black;
+    border: 1px solid black;
+    transition: 0.5s;
+}
+
+
+.btnContactUs {
+    height: 40px;
+    width: 145px;
+    outline: none;
+    border: 1px solid black;
+    background-color: transparent;
+    color: black;
+    border-radius: 4px;
+}
+
+.btnContactUs:hover {
+    background-color: black;
+    color: white;
+    border: none;
+    transition: 0.5s;
+}

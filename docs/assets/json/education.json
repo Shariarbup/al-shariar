@@ -1,0 +1,6 @@
+[
+    {"id": 1,"instituteType": "University", "instituteName":"Bangladesh University Of Professionals", "subject": "BSc. in Information & Communication Engineering", "gpa": 3.64, "passingYear":"2016-2019"},
+    {"id": 2,"instituteType": "College", "instituteName":"Bogura Cantonment Public School & College, Bogura.", "subject": "Science", "gpa": 5,  "passingYear":"2012-2014"},
+    {"id": 2,"instituteType": "School", "instituteName":"Bogura Cantonment Board High School, Bogura.", "subject": "Science", "gpa": 5,  "passingYear":"2011-2012"}
+
+]

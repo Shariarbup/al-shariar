@@ -26,5 +26,7 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
 
-# block level element er default height thake na, but default width 100%
-# Float mane hoilo screen e veshe thaka....
+- block level element er default height thake na, but default width 100%
+- normal document flow hoilo ekta div er moddhe arekta div thakle child div er ja height parent div o same height pabe
+- Float mane hoilo screen e veshe thaka....
+- multiple block level element k float dile tara inline element er motot pashapashi thakbe

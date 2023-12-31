@@ -1,0 +1,67 @@
+/* Postion */
+.position {
+    font-size: 25px;
+}
+.position {
+    div, a {
+        border: 1px solid red;
+    }
+}
+.position {
+    div {
+        width: 20%;
+        margin: 2%;
+        padding: 2%;
+        /* eitar maddhome amra block level element keo inline block banaite pari */
+        display: inline-block;
+    }
+}
+
+.position {
+    a {
+        /* inline element er khetre width, margin-bottom, margin-top kaj kore na */
+        width: 20%;
+        margin-left: 2%;
+        margin-right: 2%;
+        padding: 2%;
+        margin-top: 2%;
+        margin-bottom: 2%;
+         /* eita dile block element er moto behave korbe */
+        /* display: block;  */
+        /* eita mane block and inline er combination*/
+        display: inline-block; 
+    }
+}
+
+/* Animation */
+.animation {
+    margin-top: 3%;
+}
+.parent {
+    background-color: green;
+    height: 400px;
+    width: 400px;
+}
+
+.child {
+    background-color: red;
+    height: 50%;
+    width: 50%;
+    transition: transform 1s ease-in;
+}
+
+.parent:hover .child {
+    /* transform: translate(100%); */
+    animation: rigth-toleft 1s ease-in;
+    position: relative;
+}
+
+@keyframes right-toleft {
+    0% {
+        background-color: lightblue; top: 0%; left: 0%; border-radius: 0%;
+    }
+
+    33% {
+        background-color: aqua; top: 0%; left: 100%; border-radius: 25%;
+    }
+}

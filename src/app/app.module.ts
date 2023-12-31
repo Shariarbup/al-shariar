@@ -12,6 +12,7 @@ import { ProjectComponent } from './components/project/project.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { PortfolioServiceService } from './services/portfolio-service.service';
 import {HttpClientModule} from '@angular/common/http';
+import { PracticeComponent } from './components/practice/practice.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import {HttpClientModule} from '@angular/common/http';
     SkillComponent,
     ServiceComponent,
     ProjectComponent,
-    ContactComponent
+    ContactComponent,
+    PracticeComponent
   ],
   imports: [
     BrowserModule,

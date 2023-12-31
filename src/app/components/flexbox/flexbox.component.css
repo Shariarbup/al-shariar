@@ -5,3 +5,50 @@ pottek block level element er ekta default margin padding thake */
     margin: 0;
     padding: 0;
 }
+
+.container {
+    border: 5px solid black;
+}
+
+.flex-item {
+    color: white;
+    font-size: 1.5rem;
+    padding: 1rem;
+    text-align: center;
+}
+
+.item1 {
+    background-color: rgb(34, 144, 200);
+}
+
+.item2 {
+    background-color: blueviolet;
+}
+
+.item3 {
+    background-color: rgb(9, 160, 145);
+}
+
+.item4 {
+    background-color: rgb(18, 207, 55);
+}
+
+.item5 {
+    background-color: rgb(178, 244, 12);
+}
+
+.item6 {
+    background-color: rgb(206, 128, 26);
+}
+
+.item7 {
+    background-color: rgb(123, 4, 91);
+}
+
+.item8 {
+    background-color: rgb(50, 23, 169);
+}
+
+.item9 {
+    background-color: rgb(191, 6, 9);
+}

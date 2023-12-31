@@ -1,0 +1,7 @@
+/* eitake bole universal selector 
+and ekhane margin padding 0 daoa hoi coz
+pottek block level element er ekta default margin padding thake */
+* {
+    margin: 0;
+    padding: 0;
+}

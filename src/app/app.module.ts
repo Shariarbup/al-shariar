@@ -13,6 +13,7 @@ import { ContactComponent } from './components/contact/contact.component';
 import { PortfolioServiceService } from './services/portfolio-service.service';
 import {HttpClientModule} from '@angular/common/http';
 import { PracticeComponent } from './components/practice/practice.component';
+import { FlexboxComponent } from './components/flexbox/flexbox.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { PracticeComponent } from './components/practice/practice.component';
     ServiceComponent,
     ProjectComponent,
     ContactComponent,
-    PracticeComponent
+    PracticeComponent,
+    FlexboxComponent
   ],
   imports: [
     BrowserModule,

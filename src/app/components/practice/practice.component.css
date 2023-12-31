@@ -1,4 +1,7 @@
-/* Postion */
+.container {
+    display: flex;
+}
+/*Postion */
 .position {
     font-size: 25px;
 }

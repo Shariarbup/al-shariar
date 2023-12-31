@@ -7,6 +7,7 @@ import { ServiceComponent } from './components/service/service.component';
 import { ProjectComponent } from './components/project/project.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { PracticeComponent } from './components/practice/practice.component';
+import { FlexboxComponent } from './components/flexbox/flexbox.component';
 
 const routes: Routes = [
   {path: '',component: AboutComponent},
@@ -16,7 +17,8 @@ const routes: Routes = [
   {path: 'service',component: ServiceComponent},
   {path: 'project',component: ProjectComponent},
   {path: 'contact',component: ContactComponent},
-  {path: 'practice',component: PracticeComponent}
+  {path: 'practice',component: PracticeComponent},
+  {path: 'flexBox',component: FlexboxComponent}
 
 ];
 

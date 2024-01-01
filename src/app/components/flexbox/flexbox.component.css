@@ -14,11 +14,12 @@ eitao cross axis er jonne use hoi*/
 
 /* Flex item properties
 order - 0/1/2/3 --like this by default all flex item have order 0
-flex-grow -
-flex-shrink -
-flex-basis -
+flex-grow - 0/1/2/3 --- eita diye ekta item er width koto hobe ta niddharon kora hoi
+flex-shrink - 0/1/2/3 --- eita diye ekta item vertically koto lomba ba choto hobe ta noddharon kore
+flex-basis - 200px --- eita diye ekta item initial width theke beshi width hobe
 flex - [flex-grow] [flex-shrink] [flex-basis]
-align-self - use for align individual items
+flex - 0 1 auto ---eita mane hoilo by default flex-grow =0 , flex-shrink =1, flex-basis=auto
+align-self - stretch/flex-start/flex-end/center eita basically container er cross axis bora bor upore ba niche ba majhe thake use for align individual items
 
 */
 
@@ -53,11 +54,12 @@ pottek block level element er ekta default margin padding thake */
     font-size: 1.5rem;
     padding: 3rem;
     text-align: center;
+    /* flex-grow: 1; */
 }
 
 .item1 {
     background-color: rgb(34, 144, 200);
-    order: 1;
+    /* order: 1; */
 }
 
 .item2 {
@@ -66,10 +68,13 @@ pottek block level element er ekta default margin padding thake */
 
 .item3 {
     background-color: rgb(9, 160, 145);
+    /* flex-grow: 1; */
+    flex-shrink: 4;
 }
 
 .item4 {
     background-color: rgb(18, 207, 55);
+    /* flex-grow: 3; */
 }
 
 .item5 {

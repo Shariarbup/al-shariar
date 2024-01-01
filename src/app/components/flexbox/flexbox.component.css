@@ -1,9 +1,9 @@
 /* contanier
-display ---eita diye flex use shuru hobe
-flex-direction --- row/column hoite pare
-flex-wrap --- wrap/ nowrap hoite pare
-flex-flow --- [flex-direction] [flex-wrap] ei duitar combination
-column-gap --- 
+display --- flex/ inline-flex  eita diye flex use shuru hobe
+flex-direction --- row/row-reverse/column/column-reverse hoite pare
+flex-wrap --- wrap/ nowrap / wrap-reverse hoite pare
+flex-flow --- [flex-direction] [flex-wrap] / row nowrap (default value) ei duitar combination
+column-gap --- // eita pixel er moto kore value dite hobe
 row-gap ---
 gap ---- [column-gap] [row-gap]
 justify-content ----
@@ -20,13 +20,19 @@ pottek block level element er ekta default margin padding thake */
 
 .container {
     border: 5px solid black;
-    display: flex;
+    /* dispaly er duita value ache ekta flex --jeita dile container block level element er moto kaj korbe arekta hosse inline-lex
+    jeita dile container inline element er moto kaj korbe */
+    display: flex;  
+    /* flex-direction: row; */
+    flex-wrap: wrap;
+    column-gap: 20px;
+    row-gap: 20px;
 }
 
 .flex-item {
     color: white;
     font-size: 1.5rem;
-    padding: 1rem;
+    padding: 3rem;
     text-align: center;
 }
 

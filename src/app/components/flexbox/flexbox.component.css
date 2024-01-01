@@ -8,8 +8,19 @@ row-gap ---
 gap ---- [row-gap] [column-gap] / first value row-gap second value column-gap
 justify-content ---- flex-start/ flex-end / center / space-between (even space for all properties)/ space around(space between er motoi
 but samner and shobar last er element ar pore ekta space thakbe)/ space evenly (extra space evenly distributed)
-align-items---- stretch/ align item on cross axis
-align-content ----*/
+align-items---- stretch/ flex-start/ flex-end / center / baseline align item on cross axis
+align-content ----stretch/ flex-start/ flex-end / center /space betwen/ space around (dui line er upore o niche soman vabe space dei
+eitao cross axis er jonne use hoi*/
+
+/* Flex item properties
+order - 0/1/2/3 --like this by default all flex item have order 0
+flex-grow -
+flex-shrink -
+flex-basis -
+flex - [flex-grow] [flex-shrink] [flex-basis]
+align-self - use for align individual items
+
+*/
 
 /* eitake bole universal selector 
 and ekhane margin padding 0 daoa hoi coz
@@ -24,13 +35,17 @@ pottek block level element er ekta default margin padding thake */
     /* dispaly er duita value ache ekta flex --jeita dile container block level element er moto kaj korbe arekta hosse inline-lex
     jeita dile container inline element er moto kaj korbe */
     display: flex;  
-    height: 800px;
+    height: 200px;
     /* flex-direction: row; */
-    /* flex-wrap: wrap;
+    flex-wrap: wrap;
+    /* 
     column-gap: 20px;
     row-gap: 20px;
-    gap: 20px 20px; */
-    justify-content: center;
+    */
+    gap: 20px 20px; 
+    /* justify-content: center; */
+    /* align-items: baseline; */
+    /* align-content: flex-end; */
 }
 
 .flex-item {
@@ -42,6 +57,7 @@ pottek block level element er ekta default margin padding thake */
 
 .item1 {
     background-color: rgb(34, 144, 200);
+    order: 1;
 }
 
 .item2 {

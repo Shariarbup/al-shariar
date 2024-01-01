@@ -1,3 +1,15 @@
+/* contanier
+display ---eita diye flex use shuru hobe
+flex-direction --- row/column hoite pare
+flex-wrap --- wrap/ nowrap hoite pare
+flex-flow --- [flex-direction] [flex-wrap] ei duitar combination
+column-gap --- 
+row-gap ---
+gap ---- [column-gap] [row-gap]
+justify-content ----
+align-items---- align item on cross axis
+align-content ----*/
+
 /* eitake bole universal selector 
 and ekhane margin padding 0 daoa hoi coz
 pottek block level element er ekta default margin padding thake */
@@ -8,6 +20,7 @@ pottek block level element er ekta default margin padding thake */
 
 .container {
     border: 5px solid black;
+    display: flex;
 }
 
 .flex-item {

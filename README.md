@@ -30,3 +30,5 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 - normal document flow hoilo ekta div er moddhe arekta div thakle child div er ja height parent div o same height pabe
 - Float mane hoilo screen e veshe thaka....
 - multiple block level element k float dile tara inline element er motot pashapashi thakbe
+- float use normal documnet flow theke sha bad hoye jabe...normal documnet flow take bad diye chinta kora lagbe
+- .container:after {content: "shariar"} er mane hoilo container class er last er element hishebe shariar add korbe m

@@ -1,5 +1,8 @@
+body {
+    background-color: #16141A;
+}
 .profilePic {
-    border: 1px solid green;
+    border: 5px solid #28A745;
     border-radius: 10px;
     padding: 5px;
     height: 545px;
@@ -9,6 +12,7 @@
 .main h3 {
     font-size: 4.4rem;
     font-weight: 700;
+    color: #28A745;
 }
 
 .main h6 {
@@ -17,6 +21,7 @@
     line-height: 1;
     border-bottom: 3px solid rgb(233, 20, 109);
     width: 40%;
+    color: #28A745;
 }
 
 .main .btn1 {

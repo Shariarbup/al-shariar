@@ -8,6 +8,7 @@ import { ProjectComponent } from './components/project/project.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { PracticeComponent } from './components/practice/practice.component';
 import { FlexboxComponent } from './components/flexbox/flexbox.component';
+import { ReactiveFormsComponent } from './components/reactive-forms/reactive-forms.component';
 
 const routes: Routes = [
   {path: '',component: AboutComponent},
@@ -18,7 +19,8 @@ const routes: Routes = [
   {path: 'project',component: ProjectComponent},
   {path: 'contact',component: ContactComponent},
   {path: 'practice',component: PracticeComponent},
-  {path: 'flexBox',component: FlexboxComponent}
+  {path: 'flexBox',component: FlexboxComponent},
+  {path: 'reactive-forms',component: ReactiveFormsComponent}
 
 ];
 

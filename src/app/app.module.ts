@@ -14,6 +14,8 @@ import { PortfolioServiceService } from './services/portfolio-service.service';
 import {HttpClientModule} from '@angular/common/http';
 import { PracticeComponent } from './components/practice/practice.component';
 import { FlexboxComponent } from './components/flexbox/flexbox.component';
+import { ReactiveFormsComponent } from './components/reactive-forms/reactive-forms.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -26,12 +28,14 @@ import { FlexboxComponent } from './components/flexbox/flexbox.component';
     ProjectComponent,
     ContactComponent,
     PracticeComponent,
-    FlexboxComponent
+    FlexboxComponent,
+    ReactiveFormsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [PortfolioServiceService],
   bootstrap: [AppComponent]

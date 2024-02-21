@@ -1,4 +1,4 @@
-<form #userForm="ngForm" novalidate (ngSubmit)="onSubmit()">
+<form #userForm="ngForm" novalidate (ngSubmit)="onSubmit(userForm)">
     {{userForm.form.valid}}
 
     {{userForm.value | json }}

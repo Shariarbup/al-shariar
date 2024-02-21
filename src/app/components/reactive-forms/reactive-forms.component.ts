@@ -15,8 +15,9 @@ export class ReactiveFormsComponent {
 
   }
 
-  onSubmit() {
-    console.log(this.userModel);
+  onSubmit(userForm: any) {
+    // console.log(this.userModel);
+    console.log(userForm)
   }
 
 }

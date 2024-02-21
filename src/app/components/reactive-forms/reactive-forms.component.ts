@@ -11,4 +11,12 @@ export class ReactiveFormsComponent {
 
   userModel = new User("", "itmasjoy@gmail.com", "01968385155", "Topic", "morning", true);
 
+  validateTopic() {
+
+  }
+
+  onSubmit() {
+    console.log(this.userModel);
+  }
+
 }

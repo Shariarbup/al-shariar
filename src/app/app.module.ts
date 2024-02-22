@@ -15,7 +15,8 @@ import {HttpClientModule} from '@angular/common/http';
 import { PracticeComponent } from './components/practice/practice.component';
 import { FlexboxComponent } from './components/flexbox/flexbox.component';
 import { ReactiveFormsComponent } from './components/reactive-forms/reactive-forms.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ReactiveFormsTwoComponent } from './components/reactive-forms-two/reactive-forms-two.component';
 
 @NgModule({
   declarations: [
@@ -29,13 +30,15 @@ import { FormsModule } from '@angular/forms';
     ContactComponent,
     PracticeComponent,
     FlexboxComponent,
-    ReactiveFormsComponent
+    ReactiveFormsComponent,
+    ReactiveFormsTwoComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [PortfolioServiceService],
   bootstrap: [AppComponent]

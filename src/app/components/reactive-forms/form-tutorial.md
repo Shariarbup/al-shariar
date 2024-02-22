@@ -9,3 +9,6 @@
 
 #  Necessity Of Reactive forms two
 ![Alt text](necessity-of-reactive-forms-2.png)
+
+# FormGroup vs FormControl
+![Alt text](formgroup-vs-formcontrol.png)

@@ -9,6 +9,7 @@ import { ContactComponent } from './components/contact/contact.component';
 import { PracticeComponent } from './components/practice/practice.component';
 import { FlexboxComponent } from './components/flexbox/flexbox.component';
 import { ReactiveFormsComponent } from './components/reactive-forms/reactive-forms.component';
+import { ReactiveFormsTwoComponent } from './components/reactive-forms-two/reactive-forms-two.component';
 
 const routes: Routes = [
   {path: '',component: AboutComponent},
@@ -20,7 +21,9 @@ const routes: Routes = [
   {path: 'contact',component: ContactComponent},
   {path: 'practice',component: PracticeComponent},
   {path: 'flexBox',component: FlexboxComponent},
-  {path: 'reactive-forms',component: ReactiveFormsComponent}
+  {path: 'reactive-forms',component: ReactiveFormsComponent},
+  {path: 'reactive-forms-two',component: ReactiveFormsTwoComponent}
+
 
 ];
 

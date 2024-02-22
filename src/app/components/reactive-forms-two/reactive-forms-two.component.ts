@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
-import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { forbiddenNameValidators } from './user-name.validators';
+import { Passwordvalidator } from './password.validator';
 
 @Component({
   selector: 'app-reactive-forms-two',
@@ -11,7 +13,7 @@ export class ReactiveFormsTwoComponent {
   constructor(private fb: FormBuilder){}
 
   registrationForm = this.fb.group({
-    userName: ['Shariar'],
+    userName: ['Shariar', [Validators.required, Validators.minLength(3), forbiddenNameValidators(/password/)]],
     password: [''],
     confirmPassword: [''],
     address: ({
@@ -19,7 +21,7 @@ export class ReactiveFormsTwoComponent {
       state: [''],
       postalCode: ['']
     })
-  })
+  }, {validator: Passwordvalidator})
 
 
   // registrationForm = new FormGroup({
@@ -47,12 +49,16 @@ export class ReactiveFormsTwoComponent {
   // }
 
   
-  loadAPImethod() {
-    this.registrationForm.patchValue({
-      userName: 'Shariar',
-      password: '1123456',
-      confirmPassword: '123456'
-    })
+  // loadAPImethod() {
+  //   this.registrationForm.patchValue({
+  //     userName: '',
+  //     password: '1123456',
+  //     confirmPassword: '123456'
+  //   })
+  // }
+
+  get userName() {
+    return this.registrationForm.get('userName');
   }
 
 }

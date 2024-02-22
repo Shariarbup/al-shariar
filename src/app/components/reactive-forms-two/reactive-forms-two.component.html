@@ -3,7 +3,14 @@
     <form [formGroup]="registrationForm">
         <div class="form-group">
             <label>Username</label>
-            <input formControlName="userName" type="text" class="form-control">
+            <input [class.is-invalid]="registrationForm.get('userName')?.invalid && registrationForm.get('userName')?.touched" formControlName="userName" type="text" class="form-control">
+            <!-- <small [class.d-none]="userName?.valid && registrationForm.get('userName')?.untouched" class="text-danger">Username is required</small> -->
+            <!-- <small [class.d-none]="userName?.valid && registrationForm.get('userName')?.untouched && userName?.hasError('forbiddenName')" class="text-danger">Username is required</small> -->
+            <div *ngIf="registrationForm.get('userName')?.invalid && registrationForm.get('userName')?.touched">
+                <small *ngIf="registrationForm.get('userName')?.hasError('required')" class="text-danger">Username is required</small>
+                <small *ngIf="registrationForm.get('userName')?.hasError('minlength')" class="text-danger">Username must be at 3 characters</small>
+                <small *ngIf="registrationForm.get('userName')?.hasError('forbiddenName')" class="text-danger"> admin name not allowed</small>
+            </div>
         </div>
     
         <div class="form-group">
@@ -13,7 +20,8 @@
     
         <div class="form-group">
             <label>Confirm password</label>
-            <input formControlName="confirmPassword" type="password" class="form-control">
+            <input [class.is-invalid]="registrationForm.hasError('mismatch')" formControlName="confirmPassword" type="password" class="form-control">
+            <small *ngIf="registrationForm?.hasError('mismatch')" class="text-danger"> Password do not match</small>
         </div>
 
         <div formGroupName="address">
@@ -32,7 +40,7 @@
         </div>
     
         <button class="btn btn-primary" type="submit">Register</button>
-        <button (click)="loadAPImethod()" class="btn btn-secondary ml-2" type="button">Load API data</button>
+        <button  class="btn btn-secondary ml-2" type="button">Load API data</button>
         <br> <hr>
 
         {{registrationForm.value | json}}

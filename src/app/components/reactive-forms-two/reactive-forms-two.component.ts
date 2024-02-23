@@ -1,28 +1,62 @@
-import { Component } from '@angular/core';
-import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormControl, FormGroup, Validators, FormArray } from '@angular/forms';
 import { forbiddenNameValidators } from './user-name.validators';
 import { Passwordvalidator } from './password.validator';
+import { PortfolioServiceService } from 'src/app/services/portfolio-service.service';
 
 @Component({
   selector: 'app-reactive-forms-two',
   templateUrl: './reactive-forms-two.component.html',
   styleUrls: ['./reactive-forms-two.component.css']
 })
-export class ReactiveFormsTwoComponent {
+export class ReactiveFormsTwoComponent implements OnInit{
+  registrationForm!: FormGroup;
 
-  constructor(private fb: FormBuilder){}
+  get email () {
+    return this.registrationForm.get('email');
+  }
 
-  registrationForm = this.fb.group({
+  get phone () {
+    return this.registrationForm.get('phone');
+  }
+
+  get alternateEmails() {
+    return this.registrationForm.get('alternateEmails') as FormArray;
+  }
+
+  get alternatePhones() {
+    return this.registrationForm.get('alternatePhones') as FormArray;
+  }
+
+  addAlternatePhones() {
+    this.alternatePhones.push(this.fb.control(''));
+  }
+
+  addAlternateEmails() {
+    this.alternateEmails.push(this.fb.control(''));
+  }
+
+  constructor(private fb: FormBuilder, private portfolioService: PortfolioServiceService){}
+
+  ngOnInit() {
+    
+  this.registrationForm = this.fb.group({
     userName: ['Shariar', [Validators.required, Validators.minLength(3), forbiddenNameValidators(/password/)]],
+    phone: ['', Validators.required],
+    email: ['', Validators.required],
     password: [''],
     confirmPassword: [''],
     address: ({
       city: [''],
       state: [''],
       postalCode: ['']
-    })
+    }),
+    alternateEmails: this.fb.array([]),
+    alternatePhones: this.fb.array([])
   }, {validator: Passwordvalidator})
 
+
+  }
 
   // registrationForm = new FormGroup({
   //   userName : new FormControl('Shariar'),
@@ -59,6 +93,15 @@ export class ReactiveFormsTwoComponent {
 
   get userName() {
     return this.registrationForm.get('userName');
+  }
+
+  onSubmit() {
+    console.log(this.registrationForm.value);
+    console.log(this.registrationForm.value.alternatePhones);
+    this.portfolioService.register(this.registrationForm.value).subscribe(
+      res=> console.log("Success!", res),
+      err => console.log("error!", err)
+    );
   }
 
 }

@@ -23,4 +23,8 @@ export class PortfolioServiceService {
   getProjectData(){
     return this.http.get<Project[]>("assets/json/project.json");
   }
+
+  register(userData: any){
+    return this.http.post<any>("localhost:300", userData);
+  }
 }

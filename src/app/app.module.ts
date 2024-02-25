@@ -17,6 +17,7 @@ import { FlexboxComponent } from './components/flexbox/flexbox.component';
 import { ReactiveFormsComponent } from './components/reactive-forms/reactive-forms.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ReactiveFormsTwoComponent } from './components/reactive-forms-two/reactive-forms-two.component';
+import { ObservableComponent } from './components/observable/observable.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { ReactiveFormsTwoComponent } from './components/reactive-forms-two/react
     PracticeComponent,
     FlexboxComponent,
     ReactiveFormsComponent,
-    ReactiveFormsTwoComponent
+    ReactiveFormsTwoComponent,
+    ObservableComponent
   ],
   imports: [
     BrowserModule,

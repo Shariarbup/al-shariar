@@ -10,6 +10,7 @@ import { PracticeComponent } from './components/practice/practice.component';
 import { FlexboxComponent } from './components/flexbox/flexbox.component';
 import { ReactiveFormsComponent } from './components/reactive-forms/reactive-forms.component';
 import { ReactiveFormsTwoComponent } from './components/reactive-forms-two/reactive-forms-two.component';
+import { ObservableComponent } from './components/observable/observable.component';
 
 const routes: Routes = [
   {path: '',component: AboutComponent},
@@ -22,7 +23,8 @@ const routes: Routes = [
   {path: 'practice',component: PracticeComponent},
   {path: 'flexBox',component: FlexboxComponent},
   {path: 'reactive-forms',component: ReactiveFormsComponent},
-  {path: 'reactive-forms-two',component: ReactiveFormsTwoComponent}
+  {path: 'reactive-forms-two',component: ReactiveFormsTwoComponent},
+  {path: 'rsjx-observable',component: ObservableComponent}
 
 
 ];

@@ -4,4 +4,15 @@
         {{x}}
     </div>
     <button type="button" class="btn btn-outline-primary btn-lg" (click)="getAsyncData()">Get Data</button>
+    <h2>Of Observables in Angular</h2>
+    <div class="data-list" *ngFor="let x of ofData">
+        {{x}}
+    </div>
+    <button type="button" class="btn btn-outline-primary btn-lg" (click)="getOfAsyncData()">Get Of Data</button>
+
+    <h2>From Observables in Angular</h2>
+    <div class="data-list" *ngFor="let x of ofData">
+        {{x}}
+    </div>
+    <button type="button" class="btn btn-outline-primary btn-lg" (click)="getFromObservable()">Get from Data</button>
 </div>

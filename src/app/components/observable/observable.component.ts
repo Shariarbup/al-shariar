@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Observable } from 'rxjs';
+import { Observable, from, of } from 'rxjs';
 
 @Component({
   selector: 'app-observable',
@@ -8,6 +8,10 @@ import { Observable } from 'rxjs';
 })
 export class ObservableComponent {
   data: any[] = [];
+
+  ofData: any[] = [];
+  array1: any[] = [1,2,3,4,5];
+  array2: any[] = ['A', 'B','C', 'D'];
 
   myObservable = new Observable((observer)=> {
     // observer.next([1, 2, 3, 4, 5]);
@@ -24,18 +28,68 @@ export class ObservableComponent {
     // observer.next(4);
   });
 
+  // getAsyncData() {
+  //   // this subscriber handle three controll(next, error, complete)
+  //   this.myObservable.subscribe((val: any) => {
+  //     // this.data = val;
+  //     this.data.push(val);
+  //   },
+  //   (error)=> {
+  //     alert(error.message)
+  //   },
+  //   () => {
+  //     alert("All the data is streamed")
+  //   }
+  //   )
+  // }
+
   getAsyncData() {
     // this subscriber handle three controll(next, error, complete)
-    this.myObservable.subscribe((val: any) => {
-      // this.data = val;
-      this.data.push(val);
-    },
-    (error)=> {
-      alert(error.message)
-    },
-    () => {
-      alert("All the data is streamed")
-    }
-    )
+    this.myObservable.subscribe({
+      next: (val: any)=> {
+        this.data.push(val);
+      },
+      error(err: any) {
+        alert(err.message)
+      },
+      complete() {
+        alert("All the data is streamed");
+      }
+    })
+  }
+
+  ofObservable = of(this.array1, this.array2, 20, 30, 'A');
+
+
+  getOfAsyncData() {
+    this.ofObservable.subscribe({
+      next: (val: any)=> {
+        this.ofData.push(val);
+        console.log("🚀 ~ ObservableComponent ~ getOfAsyncData ~ val:", val)
+      },
+      error(err: any) {
+        alert(err.message)
+      },
+      complete() {
+        alert("All the data is streamed");
+      }
+    })
+  }
+
+  fromObservable = from([1,2,3,4])
+
+  getFromObservable() {
+    this.fromObservable.subscribe({
+      next: (val: any)=> {
+        this.ofData.push(val);
+        console.log("🚀 ~ ObservableComponent ~ getOfAsyncData ~ val:", val)
+      },
+      error(err: any) {
+        alert(err.message)
+      },
+      complete() {
+        alert("All the data is streamed");
+      }
+    })
   }
 }

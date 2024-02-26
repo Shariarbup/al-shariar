@@ -76,12 +76,19 @@ export class ObservableComponent {
     })
   }
 
-  fromObservable = from([1,2,3,4])
+  promiseData = new Promise((resolve, reject)=>{
+    resolve([10,20, 30]);
+  })
+
+  // fromObservable = from([1,2,3,4]) // in thid from observable we must need to pass iterable
+  // fromObservable = from('12344567') 
+  fromObservable = from(this.promiseData) 
+  formData: any[] =[];
 
   getFromObservable() {
     this.fromObservable.subscribe({
       next: (val: any)=> {
-        this.ofData.push(val);
+        this.formData.push(val);
         console.log("🚀 ~ ObservableComponent ~ getOfAsyncData ~ val:", val)
       },
       error(err: any) {

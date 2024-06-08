@@ -1,0 +1,21 @@
+[
+    {
+        "id": 1,
+        "instituteName":"BJIT Ltd", 
+        "designation": "Software Engineer (Full Stack Web Developer)", 
+        "duration":"Apr 2022-Present"
+    },
+    {
+        "id": 2,
+        "instituteName":"Isharify", 
+        "designation": "IT Executive", 
+        "duration":"Jan 2022-Apr 2022"
+    },
+    {
+        "id": 3,
+        "instituteName":"Vivo Bangladesh", 
+        "designation": "Assistant Engineer", 
+        "duration":"Aug 2021-Sep 2021"
+    }
+
+]

@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Education } from '../model/Education';
 import { Skill } from '../model/Skill';
 import { Project } from '../model/Project';
+import { Work } from '../model/Work';
 
 
 @Injectable({
@@ -22,6 +23,10 @@ export class PortfolioServiceService {
 
   getProjectData(){
     return this.http.get<Project[]>("assets/json/project.json");
+  }
+
+  getWorkExperienceData(){
+    return this.http.get<Work[]>("assets/json/work.json");
   }
 
   register(userData: any){

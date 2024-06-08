@@ -12,4 +12,36 @@
          <img src="assets/images/profile_pic_2.jpeg" class="profilePic" alt="Cinque Terre" width="304" height="236"> 
         </div>
     </div>
+    <div class="row">
+        <div class="about py-3">
+            <h1 class="text-center">About Me.</h1>
+            <p class="text-justify"> Hi I am <span class="font-weight-bold">Md. Al Shariar, </span>
+                I am a professional software developer.
+
+                Currently, I am working on Spring boot and angular framework, I have good working knowledge in Spring MVC, Spring Security, Spring RestFull API, Spring cloud, Microservice communication, Swagger, Jasper Report, Apache POI Report, Jackson library, Spring Mockito testing Framework, following good Design pattern, Clean code, etc.
+                
+                However, I have skilled in Python Django framework (full stack), web scraping with Python, HTML(PSD to HTML, responsive web page), CSS, Bootstrap, Vanilla JavaScript, jQuery, Java, C, C++, Version Controlling, Database ( MySQL, SQLite, PostgreSQL, Oracle)
+                
+                I have interested in web development, problem-solving, data science, machine learning, and artificial intelligence.
+                
+                Experience in Developing python Django web application, java desktop application and Android game using java.</p>
+
+        </div>
+    </div>
+    <br> <br>
+
+    <div class="row">
+        <section class="work py-5">
+            <div class="container py-2">
+                <h1 class="text-center">Work.</h1>
+                    <div class="row mt-5" *ngFor="let work of works">
+                        <div class="col-lg-6 institute mt-2" >
+                            <p><span >Institute Name: </span>{{work.instituteName}}</p>
+                            <p><span >Designation: </span>{{work.designation}}</p>
+                            <p><span >Duration: </span>{{work.duration}}</p>
+                        </div>
+                    </div>
+            </div>
+        </section>
+    </div>
 </div>

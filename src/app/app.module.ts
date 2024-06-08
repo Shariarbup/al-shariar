@@ -18,6 +18,8 @@ import { ReactiveFormsComponent } from './components/reactive-forms/reactive-for
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ReactiveFormsTwoComponent } from './components/reactive-forms-two/reactive-forms-two.component';
 import { ObservableComponent } from './components/observable/observable.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 
 @NgModule({
   declarations: [
@@ -40,7 +42,8 @@ import { ObservableComponent } from './components/observable/observable.componen
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    BrowserAnimationsModule
   ],
   providers: [PortfolioServiceService],
   bootstrap: [AppComponent]

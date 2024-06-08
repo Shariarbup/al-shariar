@@ -57,3 +57,31 @@ body {
     transition: 0.5s;
     color: white;
 }
+
+.text-justify {
+    text-align: justify;
+}
+
+.work {
+    background-color: #95dea8;
+}
+.work .institute {
+    font-weight: 700;
+    border-left: 5px solid rgb(100, 5, 83);
+    line-height: 1rem;
+    padding-left: 1.5rem;
+    margin-left: 1rem;
+    width: auto;
+}
+
+.work .institute span {
+    border: 1px solid rgb(100, 5, 83);
+    text-transform: uppercase;
+    background-color: black;
+    color: white;
+}
+
+.about {
+    background-color: #1dadf5;
+    display: block;
+}

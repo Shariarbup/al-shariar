@@ -1,1 +1,17 @@
 <p>parent works!</p>
+<h1>Gender value comming from child:  {{gender}}</h1>
+<!-- [(ngModel)]="father" here two way data binding will not work, because it only works within the form -->
+ <!-- ngModel use korar arekti shorto hoilo app.module e FormsModule import korte hobe-- in the imports section -->
+<input type="number" placeholder="Father Age" [(ngModel)]="father"> <br> 
+<input type="number" placeholder="Mother Age" [(ngModel)]="mother"> <br>
+<input type="number" placeholder="Brother Age" [(ngModel)]="brother"> <br>
+<input type="number" placeholder="Sister Age" [(ngModel)]="sister"> <br>
+
+<app-child 
+[fatherAge]="father" 
+[motherAge]="mother" 
+[brotherAge]="brother" 
+[sisterAge]="sister"
+(genderEventEmitter)="onChangeGenderEventEmitter($event)"
+>
+</app-child>

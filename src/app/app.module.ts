@@ -20,6 +20,9 @@ import { ObservableComponent } from './components/observable/observable.componen
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ParentComponent } from './practice/parent/parent.component';
 import { ChildComponent } from './practice/child/child.component';
+import { SiblingOneComponent } from './practice/sibling-one/sibling-one.component';
+import { SiblingTwoComponent } from './practice/sibling-two/sibling-two.component';
+import { SiblingContainerComponent } from './practice/sibling-container/sibling-container.component';
 
 
 @NgModule({
@@ -37,7 +40,10 @@ import { ChildComponent } from './practice/child/child.component';
     ReactiveFormsTwoComponent,
     ObservableComponent,
     ParentComponent,
-    ChildComponent
+    ChildComponent,
+    SiblingOneComponent,
+    SiblingTwoComponent,
+    SiblingContainerComponent
   ],
   imports: [
     BrowserModule,

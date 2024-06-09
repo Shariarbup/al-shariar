@@ -1,1 +1,13 @@
-<p>child works!</p>
+<hr>
+<h1>child works!</h1>
+<hr>
+<h1>Father Age: {{fatherAge}}</h1>
+<h1>Mother Age: {{motherAge}}</h1>
+<h1>Brother Age: {{brotherAge}}</h1>
+<h1>Sister Age: {{sisterAge}}</h1>
+
+
+<h1>Radio Button</h1>
+<input type="radio" name="gender" value="male" [(ngModel)]="gender" (change)="onChangeGender()"><span>Male</span> <br>
+<input type="radio" name="gender" value="female" [(ngModel)]="gender" (change)="onChangeGender()"><span>Female</span> <br>
+<input type="radio" name="gender" value="common" [(ngModel)]="gender" (change)="onChangeGender()"><span>Common</span> <br>

@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { EducationComponent } from './components/education/education.component';
 import { AboutComponent } from './components/about/about.component';
 import { SkillComponent } from './components/skill/skill.component';
 import { ServiceComponent } from './components/service/service.component';
@@ -15,7 +14,6 @@ import { ObservableComponent } from './components/observable/observable.componen
 const routes: Routes = [
   {path: '',component: AboutComponent},
   {path: 'about',component: AboutComponent},
-  {path: 'education',component: EducationComponent},
   {path: 'skill',component: SkillComponent},
   {path: 'service',component: ServiceComponent},
   {path: 'project',component: ProjectComponent},

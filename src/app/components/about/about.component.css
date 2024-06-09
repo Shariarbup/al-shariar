@@ -85,3 +85,24 @@ body {
     background-color: #95dea8;
     display: block;
 }
+
+/* Education */
+
+.education {
+    background-color: #95dea8;
+}
+.education .institute {
+    font-weight: 700;
+    border-left: 5px solid rgb(100, 5, 83);
+    line-height: 1rem;
+    padding-left: 1.5rem;
+    margin-left: 1rem;
+    width: auto;
+}
+
+.education .institute span {
+    border: 1px solid rgb(100, 5, 83);
+    text-transform: uppercase;
+    background-color: black;
+    color: white;
+}

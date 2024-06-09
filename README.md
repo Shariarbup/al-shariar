@@ -32,3 +32,12 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 - multiple block level element k float dile tara inline element er motot pashapashi thakbe
 - float use normal documnet flow theke sha bad hoye jabe...normal documnet flow take bad diye chinta kora lagbe
 - .container:after {content: "shariar"} er mane hoilo container class er last er element hishebe shariar add korbe m
+
+
+# How to build for production deployment
+
+- ng b --output-path docs --base-href /al-shariar/
+
+- use the above command
+
+

@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class SiblingContainerComponent {
 
+  ageFromSiblingOne: number | undefined;
+  
+  onChangeAgeEmitter(value: number) {
+    this.ageFromSiblingOne = value;
+  }
+
 }

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-sibling-two',
@@ -6,5 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./sibling-two.component.css']
 })
 export class SiblingTwoComponent {
+  @Input()
+  ageFromSiblingOne : number | undefined;
 
 }

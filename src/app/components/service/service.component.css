@@ -1,29 +1,130 @@
-.card {
-    border: none;
-    box-shadow: -1px 3px 13px 2px rgba(0,0,0,0.46);
-    -webkit-box-shadow: -1px 3px 13px 2px rgba(0,0,0,0.46);
-    -moz-box-shadow: -1px 3px 13px 2px rgba(0,0,0,0.46);
-
+/* General styles */
+.service {
+  padding: 50px 0; /* Reduced padding to ensure better fit */
+  background-color: #f7f8fa;
+  color: #333;
+  min-height: 100vh; /* Ensure full screen fit */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.card p {
-    color: grey;
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-.circle {
-    height: 70px;
-    width: 70px;
-    background-color: lightgrey;
-    color: black;
-    padding: 12px;
-    font-size: 30px;
-    border-radius: 50%;
-    display: inline-block;
-    margin-bottom: 20px;
+.section-title {
+  font-size: 2.2rem;
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 30px; /* Reduced space for better fit */
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }
 
-.card:hover .circle{
-    background-color: black;
-    color: white;
-    transition: 0.5s;
+.service-card {
+  background: #fff;
+  border-radius: 15px;
+  padding: 30px; /* Reduced padding to fit content */
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-bottom: 30px; /* Reduced bottom margin */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+}
+
+.service-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.icon-wrapper {
+  background: #3498db;
+  padding: 15px;
+  border-radius: 50%;
+  margin-right: 15px;
+  color: #fff;
+  font-size: 2rem; /* Adjusted icon size for better fit */
+}
+
+.service-title {
+  font-size: 1.7rem; /* Adjusted title size */
+  font-weight: bold;
+  color: #3498db;
+  text-transform: uppercase;
+}
+
+.service-description {
+  font-size: 1.1rem;
+  color: #7f8c8d;
+  margin-bottom: 20px; /* Reduced bottom margin */
+  line-height: 1.6;
+}
+
+.service-skills {
+  list-style-type: none;
+  padding: 0;
+  font-size: 1rem;
+  color: #3498db;
+  margin-bottom: 20px; /* Reduced bottom margin */
+}
+
+.service-skills li {
+  margin-bottom: 10px; /* Reduced space between skills */
+}
+
+.btn {
+  padding: 12px 30px;
+  font-size: 1rem; /* Adjusted button font size */
+  text-transform: uppercase;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-design {
+  background-color: #3498db;
+  color: #fff;
+}
+
+.btn-design:hover {
+  background-color: #2980b9;
+  transform: translateY(-5px);
+}
+
+.btn-dev {
+  background-color: #e74c3c;
+  color: #fff;
+}
+
+.btn-dev:hover {
+  background-color: #c0392b;
+  transform: translateY(-5px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .service-card {
+    padding: 20px; /* Reduced padding on smaller screens */
+  }
+
+  .service-title {
+    font-size: 1.5rem; /* Reduced title size on smaller screens */
+  }
+
+  .service-description {
+    font-size: 1rem; /* Adjusted description font size */
+  }
+
+  .icon-wrapper {
+    font-size: 1.8rem; /* Adjusted icon size */
+  }
 }

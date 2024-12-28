@@ -1,9 +1,15 @@
 [
     {
-        "id": 1,
+        "id": 4,
+        "instituteName":"Bangladesh University Of Professionals(BUP)", 
+        "designation": "Assistant Programmer", 
+        "duration":"Oct 2024-Present"
+    },
+    {
+        "id": 3,
         "instituteName":"BJIT Ltd", 
         "designation": "Software Engineer (Full Stack Web Developer)", 
-        "duration":"Apr 2022-Present"
+        "duration":"Apr 2022-Oct 2024"
     },
     {
         "id": 2,
@@ -12,7 +18,7 @@
         "duration":"Jan 2022-Apr 2022"
     },
     {
-        "id": 3,
+        "id": 1,
         "instituteName":"Vivo Bangladesh", 
         "designation": "Assistant Engineer", 
         "duration":"Aug 2021-Sep 2021"

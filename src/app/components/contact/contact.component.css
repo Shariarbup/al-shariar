@@ -1,3 +1,63 @@
 .contact {
-    background-color: rgb(235, 230, 230);
+    background-color: #f7f9fc;
+    padding: 50px 0;
+    border-radius: 10px;
+}
+
+.contact h2 {
+    font-size: 28px;
+    font-weight: 600;
+}
+
+.contact .contact-item {
+    font-size: 18px;
+    color: #333;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.contact .contact-item:hover {
+    transform: scale(1.05);
+    color: #0056b3;
+}
+
+.contact form input, .contact form textarea {
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s ease;
+}
+
+.contact form input:focus, .contact form textarea:focus {
+    border-color: #0056b3;
+    outline: none;
+}
+
+.contact .btn-primary {
+    background-color: #0056b3;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+.contact .btn-primary:hover {
+    background-color: #004085;
+}
+
+.contact form {
+    animation: fadeInUp 1s ease-out;
+}
+
+@keyframes fadeInUp {
+    0% {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+#formMessage {
+    display: none;
+    color: #28a745;
+    font-size: 16px;
 }

@@ -1,65 +1,67 @@
 <div class="container pb-5 main">
-    <div class="row py-5">
-        <div class="col-lg-6 py-5">
-            <h3><small>Hello, i'm</small> <br>
-            MD. AL SHARIAR
+    <!-- Hero Section -->
+    <div class="row align-items-center py-5 hero" style="background: linear-gradient(120deg, #6595f6 0%, #fda085 100%);">
+        <div class="col-lg-6 text-center text-lg-left py-5">
+            <h3 class="intro-text">
+                <small class="greeting">Hello, I'm</small> <br>
+                <span class="name">MD. AL SHARIAR</span>
             </h3>
-            <h6 class="pt-3">WEB DEVELOPER (FULL STACK)</h6>
-            <input type="button" value="My Work" class="btn1 mt-5 mr-3">
-            <input type="button" value="Hire Me" class="btn2 mt-5">
-        </div>
-        <div class="col-lg-6">
-         <img src="assets/images/profile_pic_2.jpeg" class="profilePic" alt="Cinque Terre" width="304" height="236"> 
-        </div>
-    </div>
-    <div class="row">
-        <div class="about py-3">
-            <h1 class="text-center">About Me.</h1>
-            <p class="text-justify"> Hi I am <span class="font-weight-bold">Md. Al Shariar, </span>
-                I am a professional software developer.
-
-                Currently, I am working on Spring boot and angular framework, I have good working knowledge in Spring MVC, Spring Security, Spring RestFull API, Spring cloud, Microservice communication, Swagger, Jasper Report, Apache POI Report, Jackson library, Spring Mockito testing Framework, following good Design pattern, Clean code, etc.
-                
-                However, I have skilled in Python Django framework (full stack), web scraping with Python, HTML(PSD to HTML, responsive web page), CSS, Bootstrap, Vanilla JavaScript, jQuery, Java, C, C++, Version Controlling, Database ( MySQL, SQLite, PostgreSQL, Oracle)
-                
-                I have interested in web development, problem-solving, data science, machine learning, and artificial intelligence.
-                
-                Experience in Developing python Django web application, java desktop application and Android game using java.</p>
-
-        </div>
-    </div>
-    <br> <br>
-
-    <div class="row">
-        <section class="work py-5">
-            <div class="container py-2">
-                <h1 class="text-center">Work.</h1>
-                    <div class="row mt-5" *ngFor="let work of works">
-                        <div class="col-lg-6 institute mt-2" >
-                            <p><span >Institute Name: </span>{{work.instituteName}}</p>
-                            <p><span >Designation: </span>{{work.designation}}</p>
-                            <p><span >Duration: </span>{{work.duration}}</p>
-                        </div>
-                    </div>
+            <h6 class="role pt-3">WEB DEVELOPER (FULL STACK)</h6>
+            <div class="mt-5">
+                <button class="btn btn-primary btn1 mr-3">My Work</button>
+                <button class="btn btn-outline-primary btn2">Hire Me</button>
             </div>
-        </section>
+        </div>
+        <div class="col-lg-6 text-center">
+            <img src="assets/images/profile_pic_2.jpeg" class="profilePic square shadow-lg" alt="Profile Picture" width="300">
+        </div>
     </div>
-    <br> <br>
 
-    <div class="row">
-        <section class="education py-5">
-            <div class="container py-2">
-                <h1 class="text-center">Education.</h1>
-                    <div class="row mt-5" *ngFor="let edu of educations">
-                        <div class="col-lg-6 institute mt-2"  >
-                            <p><span >Institute Type: </span>{{edu.instituteType}}</p>
-                            <p><span >Institute Name: </span>{{edu.instituteName}}</p>
-                            <p><span >Subject: </span>{{edu.subject}}</p>
-                            <p><span >Result: </span>{{edu.gpa}}</p>
-                            <p><span >Passing Year: </span>{{edu.passingYear}}</p>
-                        </div>
+    <!-- About Section -->
+    <div class="row about-section py-5" style="background: #f8f9fa;">
+        <div class="col-12 py-3">
+            <h1 class="text-center section-title">About Me</h1>
+            <p class="text-justify about-text">
+                Hi, I am <span class="font-weight-bold">Md. Al Shariar</span>, a professional software developer.
+                <br><br>
+                Craft web applications using Spring Boot and Angular (Frontend and Backend).
+                Strong foundation in HTML, CSS, JavaScript 
+                Passionate about problem-solving, learning about DSA, algorithms, design patterns, DBMS, System design, Microservice architecture, and DevOps (AWS, Azure)
+            </p>
+        </div>
+    </div>
+
+    <!-- Work Section -->
+    <div class="row work-section py-5" style="background: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);">
+        <div class="col-12 py-2">
+            <h1 class="text-center section-title">Work</h1>
+            <div class="row mt-5">
+                <div class="col-lg-6 mb-4" *ngFor="let work of works">
+                    <div class="work-card p-4 shadow-sm">
+                        <p><span class="font-weight-bold">Institute Name:</span> {{work.instituteName}}</p>
+                        <p><span class="font-weight-bold">Designation:</span> {{work.designation}}</p>
+                        <p><span class="font-weight-bold">Duration:</span> {{work.duration}}</p>
                     </div>
+                </div>
             </div>
-        </section>        
+        </div>
+    </div>
+
+    <!-- Education Section -->
+    <div class="row education-section py-5" style="background: #e3f2fd;">
+        <div class="col-12 py-2">
+            <h1 class="text-center section-title">Education</h1>
+            <div class="row mt-5">
+                <div class="col-lg-6 mb-4" *ngFor="let edu of educations">
+                    <div class="education-card p-4 shadow-sm">
+                        <p><span class="font-weight-bold">Institute Type:</span> {{edu.instituteType}}</p>
+                        <p><span class="font-weight-bold">Institute Name:</span> {{edu.instituteName}}</p>
+                        <p><span class="font-weight-bold">Subject:</span> {{edu.subject}}</p>
+                        <p><span class="font-weight-bold">Result:</span> {{edu.gpa}}</p>
+                        <p><span class="font-weight-bold">Passing Year:</span> {{edu.passingYear}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>

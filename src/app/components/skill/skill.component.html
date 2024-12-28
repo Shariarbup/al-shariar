@@ -1,18 +1,17 @@
 <section class="skill">
-    <div class="container">
-        <div class="row">
-               
-                    <h2>Skills</h2>
-                    <div *ngFor="let progress of skills" class="progress mb-4">
-                      <div class="progress-bar" role="progressbar"
-                           [style.width]="progress.percentage + '%'">
-                        {{ progress.name }} - {{ progress.percentage }}%
-                      </div>
-                    </div>
-
-                <input type="button" value="Download CV" class="btnDownloadCV mt-5">
-                <input type="button" value="Contact Us" class="btnContactUs mt-5">
-
+  <div class="container">
+    <div class="row text-center">
+      <h2 class="section-title mb-5">Skills</h2>
+      <div *ngFor="let progress of skills" class="col-12 mb-4">
+        <div class="progress">
+          <div class="progress-bar" role="progressbar"
+               [style.width]="progress.percentage + '%'"
+               [ngClass]="{'animate-progress': progress.percentage > 0}"
+               [ngStyle]="{'--progress-width': progress.percentage + '%'}">
+            <span>{{ progress.name }} - {{ progress.percentage }}%</span>
+          </div>
         </div>
+      </div>
     </div>
+  </div>
 </section>

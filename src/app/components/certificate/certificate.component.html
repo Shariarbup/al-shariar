@@ -1,0 +1,64 @@
+<section class="certificates py-1">
+  <div class="container">
+    <h2 class="section-title text-center mb-5">My Certificates</h2>
+    <ul class="filter-list d-flex justify-content-center list-unstyled mb-4">
+      <li 
+        class="btn btn-outline-primary mx-2" 
+        [class.active]="activeFilter === 'All'" 
+        (click)="filterCertificates('All')">
+        All
+      </li>
+      <li 
+        class="btn btn-outline-primary mx-2" 
+        [class.active]="activeFilter === 'academic'" 
+        (click)="filterCertificates('academic')">
+        Academic
+      </li>
+      <li 
+        class="btn btn-outline-primary mx-2" 
+        [class.active]="activeFilter === 'extracurricular'" 
+        (click)="filterCertificates('extracurricular')">
+        Extra-curricular
+      </li>
+    </ul>
+
+    <div class="row g-4 certificates-grid">
+      <div 
+        class="col-md-4 certificate-card" 
+        *ngFor="let certificate of filteredCertificates" 
+        [@fadeIn]>
+        <div class="card h-100 shadow-lg">
+          <img 
+            [src]="certificate.image" 
+            [alt]="certificate.title" 
+            class="card-img-top rounded" 
+            (click)="viewFullImage(certificate.image)">
+          <div class="card-body">
+            <h5 class="card-title">{{ certificate.title }}</h5>
+            <p class="card-text">{{ certificate.description }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal for Full Image -->
+  <div 
+    class="modal fade" 
+    id="imageModal" 
+    tabindex="-1" 
+    aria-hidden="true" 
+    aria-labelledby="imageModalLabel">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="imageModalLabel">Certificate Image</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body text-center">
+          <img [src]="selectedImage" alt="Certificate Full View" class="img-fluid">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

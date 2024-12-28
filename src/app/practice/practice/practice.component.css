@@ -54,7 +54,7 @@
 }
 
 .parent:hover .child {
-    /* transform: translate(100%); */
+    transform: translate(100%);
     animation: rigth-toleft 1s ease-in;
     position: relative;
 }

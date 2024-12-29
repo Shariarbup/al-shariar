@@ -1,12 +1,13 @@
 [
     {"id": 1, "name": "Java", "percentage": 80},
     {"id": 2, "name": "Spring Boot", "percentage": 80},
-    {"id": 3, "name": "Angular", "percentage": 60},
+    {"id": 3, "name": "Angular", "percentage": 80},
     {"id": 4, "name": "Typescript", "percentage": 90},
     {"id": 5, "name": "React", "percentage": 60},
     {"id": 6, "name": "HTML, CSS, Vanila JS", "percentage": 95},
     {"id": 7, "name": "Python", "percentage": 60},
     {"id": 8, "name": "Python Django", "percentage": 60},
-    {"id": 9, "name": "Docker", "percentage": 40},
-    {"id": 10, "name": "CI/CD pipeline", "percentage": 60}
+    {"id": 9, "name": "Docker", "percentage": 50},
+    {"id": 10, "name": "CI/CD pipeline", "percentage": 60},
+    {"id": 11, "name": "Version controlling(Github, Gitlab)", "percentage": 100}
 ]

@@ -86,6 +86,30 @@
         "description": "Learn basic python from sololearn",
         "image":"assets/images/certificate/python_core_sololearn.jpg",
         "category": "extracurricular"
+      },
+      {
+        "id": 12,
+        "title": "UNDERGRADE",
+        "institute": "BUP",
+        "description": "BSc. in Information & Communication Engineer(ICE)",
+        "image":"assets/images/certificate/honors.jpg",
+        "category": "academic"
+      },
+      {
+        "id": 13,
+        "title": "HSC",
+        "institute": "Bogura Cantonment Public School & College",
+        "description": "Science Group",
+        "image":"assets/images/certificate/hsc.jpg",
+        "category": "academic"
+      },
+      {
+        "id": 14,
+        "title": "SSC",
+        "institute": "Bogura Cantonment Board High School",
+        "description": "Science Group",
+        "image":"assets/images/certificate/ssc.jpg",
+        "category": "academic"
       }
 
   ]

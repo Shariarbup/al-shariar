@@ -1,17 +1,22 @@
 export class Project {
     public id: number;
-    public name: string;
+    public title: string;
     public description: string;
-    public imagePath: string;
-    public githubLink: string;
-    public liveLink:string;
+    public technologyUsed: string;
+    public image: string;
+    public category: string;
+    public viewUrl: string;
+    public githubUrl: string;
 
-    constructor(id: number, name: string, description: string, imagePath: string, githubLink: string, liveLink:string) {
+    constructor(id: number, title: string, description: string, technologyUsed: string,
+         image: string, category: string, viewUrl: string, githubUrl: string) {
         this.id = id;
-        this.name = name;
+        this.title = title;
         this.description = description;
-        this.imagePath = imagePath;
-        this.githubLink = githubLink;
-        this.liveLink = liveLink;
+        this.technologyUsed = technologyUsed;
+        this.image = image;
+        this.category = category;
+        this.viewUrl = viewUrl;
+        this.githubUrl = githubUrl; 
     }
 }

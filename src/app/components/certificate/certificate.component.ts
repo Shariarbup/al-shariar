@@ -1,5 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import {animate, style, transition, trigger} from "@angular/animations";
+import { Certificate } from 'src/app/model/Certificate';
+import { PortfolioServiceService } from 'src/app/services/portfolio-service.service';
 declare var bootstrap: any;
 @Component({
   selector: 'app-certificate',
@@ -15,44 +17,22 @@ declare var bootstrap: any;
   ],
 })
 
-export class CertificateComponent {
+export class CertificateComponent implements OnInit{
   activeFilter: string = 'All';
   selectedImage: string | null = null;
-  
-  certificates = [
-    {
-      title: 'Bachelor of Science',
-      description: 'Academic degree in Information and Communication Engineering.',
-      image: 'assets/images/profile_pic_2.jpeg',
-      category: 'academic',
-    },
-    {
-      title: 'Masterclass in Data Science',
-      description: 'Certification in advanced data science techniques.',
-      image: 'assets/images/profile_pic_2.jpeg',
-      category: 'academic',
-    },
-    {
-      title: 'Hackathon Winner 2023',
-      description: 'Winner of a prestigious hackathon competition.',
-      image: 'assets/images/profile_pic_2.jpeg',
-      category: 'extracurricular',
-    },
-    {
-      title: 'Leadership Workshop',
-      description: 'Certificate for outstanding leadership in workshops.',
-      image: 'assets/images/profile_pic_2.jpeg',
-      category: 'extracurricular',
-    },
-    {
-      title: 'Web Design Excellence',
-      description: 'Awarded for exceptional web design projects.',
-      image: 'assets/images/profile_pic_2.jpeg',
-      category: 'extracurricular',
-    },
-  ];
 
-  filteredCertificates = [...this.certificates];
+  public certificates: Certificate[] = [];
+  public filteredCertificates: Certificate[] = []; // Initialize as an empty array
+  
+  constructor(private portfolioService: PortfolioServiceService) {}
+
+  ngOnInit(): void {
+    this.portfolioService.getCertificateData().subscribe((res: Certificate[])=>{
+      this.certificates = res;
+      this.filteredCertificates = [...this.certificates];
+  })
+  }
+
 
   filterCertificates(filter: string): void {
     this.activeFilter = filter;

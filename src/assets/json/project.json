@@ -1,11 +1,161 @@
 [
-    
-    {
-        "id": 1,
-        "name": "",
-        "description": "",
-        "technology": "",
-        "githubLink": "",
-        "liveLink": ""
-    }
-]
+    {  
+      "id":1,
+      "title": "BdExpress (E-commerce site)",
+      "description": "Python django framework(back-end) and html, css, bootstrap(front-end).",
+      "technologyUsed": "Python Djangp, Sqlite, Python Django Rest",
+      "image": "assets/images/default_project_image.jpg",
+      "category": "pyhton",
+      "viewUrl": "#",
+      "githubUrl": "https://github.com/Shariarbup/bdExpress-E-commerce-site"
+    },
+
+    {  
+      "id":2,
+      "title": "Boikothon( A book review site)",
+      "description": " Python django framework(back-end) and html, css, bootstrap(front-end).",
+      "technologyUsed": "Python Django, Sqlite",
+      "image": "assets/images/default_project_image.jpg",
+      "category": "python",
+      "viewUrl": "#",
+      "githubUrl": "https://github.com/Shariarbup/boikothon"
+    },
+
+    {  
+      "id":3,
+      "title": "BD LifeHackerz (A personal blog site)",
+      "description": "Python django framework( back-end), and html,css,bootstrap(front-end).",
+      "technologyUsed": "",
+      "image": "assets/images/default_project_image.jpg",
+      "category": "pyhton",
+      "viewUrl": "#",
+      "githubUrl": "https://github.com/Shariarbup/blog"
+    },
+    {  
+      "id":4,
+      "title": "Local Library (Library Management System)",
+      "description": "Python django framework( back-end), and html,css,bootstrap(front-end).",
+      "technologyUsed": "",
+      "image": "assets/images/default_project_image.jpg",
+      "category": "python",
+      "viewUrl": "#",
+      "githubUrl": " https://github.com/Shariarbup/localLibrary"
+    },
+    {  
+      "id":5,
+      "title": "ToDo App",
+      "description": "Python django framework( back-end), and html,css,bootstrap(front-end).",
+      "technologyUsed": "",
+      "image": "assets/images/default_project_image.jpg",
+      "category": "pyhton",
+      "viewUrl": "#",
+      "githubUrl": "https://github.com/Shariarbup/ToDo"
+    },
+
+    {  
+      "id":6,
+      "title": "Shariar’s Flying Fish",
+      "description": "Android game developed by java",
+      "technologyUsed": "",
+      "image": "assets/images/default_project_image.jpg",
+      "category": "android",
+      "viewUrl": "#",
+      "githubUrl": "https://github.com/Shariarbup/Shariar_Android_Project/tree/master/ShariarFish"
+    },
+
+    {  
+      "id":7,
+      "title": "UI Desigin (Boi Bikri)",
+      "description": " html,css,bootstrap and javascript(front-end)",
+      "technologyUsed": "",
+      "image": "assets/images/default_project_image.jpg",
+      "category": "html",
+      "viewUrl": "#",
+      "githubUrl": "https://github.com/Shariarbup/Shariar_Web_Page_Design/tree/master/Final%20Boi%20Bikri%20verson-1.1"
+    },
+
+    {  
+      "id":8,
+      "title": "UI Desigin (IEEE BUP SB)",
+      "description": "html,css,bootstrap and javascript(front-end)",
+      "technologyUsed": "",
+      "image": "assets/images/default_project_image.jpg",
+      "category": "html",
+      "viewUrl": "#",
+      "githubUrl": "https://github.com/Shariarbup/Shariar_Web_Page_Design/tree/master/final-ieee/src"
+    },
+
+    {  
+      "id":9,
+      "title": "UI Desigin (Full Website Template)",
+      "description": "html,css(front end)",
+      "technologyUsed": "",
+      "image": "assets/images/default_project_image.jpg",
+      "category": "html",
+      "viewUrl": "#",
+      "githubUrl": "https://github.com/Shariarbup/Shariar_Web_Page_Design/tree/master/full%20website%20one"
+    },
+
+    {  
+      "id":10,
+      "title": "UI Desigin (Student Management System)",
+      "description": "html,css,bootstrap and javascript(front end)",
+      "technologyUsed": "",
+      "image": "assets/images/default_project_image.jpg",
+      "category": "html",
+      "viewUrl": "#",
+      "githubUrl": "https://github.com/Shariarbup/Shariar_Web_Page_Design/tree/master/Hackathone%20Final"
+    },
+
+    {  
+      "id":11,
+      "title": "Training Management System",
+      "description": "Developed a web application for managing a training academy, Managed Batches, Courses, Scheduling, Trainee Evaluations, Trainers, and Trainees with role-based access control",
+      "technologyUsed": "Spring Boot, React, MYSQL",
+      "image": "assets/images/default_project_image.jpg",
+      "category": "java",
+      "viewUrl": "",
+      "githubUrl": "https://github.com/Shariarbup/BJIT_ACADEMY_TRAINING-SERVLET_SPRING_MVC_SPRING_BOOT_REACT-/tree/main/Final_Project/BJIT_Academy_Training_Management_Md_Al_Shariar"
+    },
+
+    {  
+      "id":12,
+      "title": "Training Management System",
+      "description": "Developed a web application for managing a training academy, Managed Batches, Courses, Scheduling, Trainee Evaluations, Trainers, and Trainees with role-based access control",
+      "technologyUsed": "Spring Boot, React, MYSQL",
+      "image": "assets/images/default_project_image.jpg",
+      "category": "java",
+      "viewUrl": "",
+      "githubUrl": "https://github.com/Shariarbup/BJIT_ACADEMY_TRAINING-SERVLET_SPRING_MVC_SPRING_BOOT_REACT-/tree/main/Final_Project/BJIT_Academy_Training_Management_Md_Al_Shariar"
+    },
+    {  
+        "id":13,
+        "title": "IP Server project",
+        "description": "In this, project, we can add, modify, and delete servers, and we can also ping servers from this project.",
+        "technologyUsed": " Spring Boot, Angular, MYSQL",
+        "image": "assets/images/default_project_image.jpg",
+        "category": "java",
+        "viewUrl": " https://github.com/Shariarbup/serverfront-spring-boot-angular",
+        "githubUrl": "https://github.com/Shariarbup/server-spring-boot-rest"
+      },
+      {  
+        "id":14,
+        "title": "Blog Project",
+        "description": "Developed a web application where users can add profiles and blog posts.",
+        "technologyUsed": "Spring Boot, MySQL",
+        "image": "assets/images/default_project_image.jpg",
+        "category": "java",
+        "viewUrl": "#",
+        "githubUrl": " https://github.com/Shariarbup/demo.blog.spring.boot.rest"
+      },
+      {  
+        "id":15,
+        "title": "BUP DASHBOARD",
+        "description": "In this site we will all the official and unofficial website information",
+        "technologyUsed": "Spring Boot, MySQL, Spring security, Thymleaf",
+        "image": "assets/images/default_project_image.jpg",
+        "category": "java",
+        "viewUrl": "#",
+        "githubUrl": "https://github.com/Shariarbup/bup-dashboard"
+      }
+  ]

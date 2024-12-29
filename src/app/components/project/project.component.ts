@@ -17,61 +17,19 @@ import {animate, style, transition, trigger} from "@angular/animations";
   ]
 })
 export class ProjectComponent implements OnInit {
-  // public projects: Project[] = [];
-
-  constructor(private portfolioService: PortfolioServiceService) {
-    // this.portfolioService.getProjectData().subscribe((res: Project[])=>{
-    //     this.projects = res;
-    // })
-  }
-
+  public projects: Project[] = [];
+  public filteredProjects: Project[] = []; // Initialize as an empty array
   activeFilter: string = 'All';
-  projects = [
-    {
-      title: 'Java Project',
-      description: 'This project was built using Java, demonstrating solid back-end skills.',
-      image: 'assets/images/profile_pic_2.jpeg',
-      category: 'java',
-      viewUrl: 'project-url',
-      githubUrl: 'https://github.com/username/java-project',
-    },
-    {
-      title: 'Angular Project',
-      description: 'This is a front-end application built with Angular.',
-      image: 'assets/images/profile_pic_2.jpeg',
-      category: 'angular',
-      viewUrl: 'project-url',
-      githubUrl: 'https://github.com/username/angular-project',
-    },
-    {
-      title: 'Python Project',
-      description: 'A data science project built using Python and machine learning libraries.',
-      image: 'assets/images/profile_pic_2.jpeg',
-      category: 'python',
-      viewUrl: 'project-url',
-      githubUrl: 'https://github.com/username/python-project',
-    },
-    {
-      title: 'React Project',
-      description: 'A modern web app built with React.js.',
-      image: 'assets/images/profile_pic_2.jpeg',
-      category: 'react',
-      viewUrl: 'project-url',
-      githubUrl: 'https://github.com/username/react-project',
-    },
-    {
-      title: 'HTML/CSS/JS Project',
-      description: 'A responsive website built with HTML, CSS, and JavaScript.',
-      image: 'assets/images/profile_pic_2.jpeg',
-      category: 'html',
-      viewUrl: 'project-url',
-      githubUrl: 'https://github.com/username/html-project',
-    },
-  ];
 
-  filteredProjects = [...this.projects];
+  constructor(private portfolioService: PortfolioServiceService) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    // Fetch project data and initialize filteredProjects
+    this.portfolioService.getProjectData().subscribe((res: Project[]) => {
+      this.projects = res;
+      this.filteredProjects = [...this.projects]; // Set filteredProjects after data is fetched
+    });
+  }
 
   filterProjects(filter: string): void {
     this.activeFilter = filter;

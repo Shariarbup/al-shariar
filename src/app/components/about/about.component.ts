@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { ViewportScroller } from '@angular/common';
+import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { Education } from 'src/app/model/Education';
 import { Work } from 'src/app/model/Work';
 import { PortfolioServiceService } from 'src/app/services/portfolio-service.service';
@@ -8,20 +10,32 @@ import { PortfolioServiceService } from 'src/app/services/portfolio-service.serv
   templateUrl: './about.component.html',
   styleUrls: ['./about.component.css']
 })
-export class AboutComponent {
+export class AboutComponent implements OnInit {
   works: Work[] = [];
 
   educations: Education[] = [];
 
-  constructor(private portfolioservice: PortfolioServiceService) {
-    this.portfolioservice.getWorkExperienceData().subscribe((res:Work[]) =>{
-        this.works = res;        
+  constructor(private portfolioservice: PortfolioServiceService,
+    private route: ActivatedRoute,
+    private viewportScroller: ViewportScroller
+  ) {
+    this.portfolioservice.getWorkExperienceData().subscribe((res: Work[]) => {
+      this.works = res;
     })
-    this.portfolioservice.getEducationData().subscribe((res:Education[]) =>{
+    this.portfolioservice.getEducationData().subscribe((res: Education[]) => {
       this.educations = res;
-      console.log("🚀 ~ file: education.component.ts:17 ~ EducationComponent ~ this.porrtfolioservice.getEducationData ~ this.educations:", this.educations)
-      
-  })
+    })
   }
+
+  ngOnInit(): void {
+    // Listen for the fragment
+    this.route.fragment.subscribe((fragment) => {
+      if (fragment) {
+        this.viewportScroller.scrollToAnchor(fragment);
+      }
+    });
+  }
+
+
 
 }

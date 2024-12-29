@@ -38,7 +38,7 @@
             <div class="row mt-5">
                 <div class="col-lg-6 mb-4" *ngFor="let work of works">
                     <div class="work-card p-4 shadow-sm">
-                        <p><span class="font-weight-bold">Institute Name:</span> {{work.instituteName}}</p>
+                        <h4>{{work.instituteName}}</h4>
                         <p><span class="font-weight-bold">Designation:</span> {{work.designation}}</p>
                         <p><span class="font-weight-bold">Duration:</span> {{work.duration}}</p>
                     </div>
@@ -54,10 +54,10 @@
             <div class="row mt-5">
                 <div class="col-lg-6 mb-4" *ngFor="let edu of educations">
                     <div class="education-card p-4 shadow-sm">
-                        <p><span class="font-weight-bold">Institute Type:</span> {{edu.instituteType}}</p>
+                        <h4 class="text-center mb-3 pb-3" style="border-bottom: 3px solid #E3F2FD;">{{edu.instituteType}}</h4>
                         <p><span class="font-weight-bold">Institute Name:</span> {{edu.instituteName}}</p>
                         <p><span class="font-weight-bold">Subject:</span> {{edu.subject}}</p>
-                        <p><span class="font-weight-bold">Result:</span> {{edu.gpa}}</p>
+                        <p><span class="font-weight-bold">GPA/CGPA:</span> {{edu.gpa}}</p>
                         <p><span class="font-weight-bold">Passing Year:</span> {{edu.passingYear}}</p>
                     </div>
                 </div>

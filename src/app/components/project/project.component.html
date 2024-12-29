@@ -34,6 +34,12 @@
       </li>
       <li
         class="btn btn-outline-primary mx-2"
+        [class.active]="activeFilter === 'php'"
+        (click)="filterProjects('php')">
+        Php
+      </li>
+      <li
+        class="btn btn-outline-primary mx-2"
         [class.active]="activeFilter === 'html'"
         (click)="filterProjects('html')">
         HTML/CSS/Bootstrap/JS

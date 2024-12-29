@@ -157,5 +157,136 @@
         "category": "java",
         "viewUrl": "#",
         "githubUrl": "https://github.com/Shariarbup/bup-dashboard"
+      },
+      {  
+        "id":16,
+        "title": "BUP DASHBOARD UI",
+        "description": "In this site we will all the official and unofficial website information",
+        "technologyUsed": "HTML, CSS, JS, BOOTSTRAP",
+        "image": "assets/images/default_project_image.jpg",
+        "category": "html",
+        "viewUrl": "#",
+        "githubUrl": "https://github.com/Shariarbup/bup-dashboard-ui"
+      },
+      {  
+        "id":17,
+        "title": "LARAVEL CRUD APPLICATION",
+        "description": "This laravel crud application",
+        "technologyUsed": "PHP LARAVEL, HTML, CSS, JS, BOOTSTRAP",
+        "image": "assets/images/default_project_image.jpg",
+        "category": "php",
+        "viewUrl": "#",
+        "githubUrl": "https://github.com/Shariarbup/laravelCRUD"
+      },
+      {  
+        "id":18,
+        "title": "SPRING BOOT WITH THYMLEAF CRUD APPLICATION",
+        "description": "This spring boot thymleaf crud application",
+        "technologyUsed": "Spring boot, thymleaf, HTML, CSS, JS, BOOTSTRAP",
+        "image": "assets/images/default_project_image.jpg",
+        "category": "java",
+        "viewUrl": "#",
+        "githubUrl": "https://github.com/Shariarbup/sboot-thymleaf-crud"
+      },
+      {  
+        "id":19,
+        "title": "SPRING BOOT AND ANGULAR MICROSERVICE PROJECT",
+        "description": "This spring boot microservice project with angular",
+        "technologyUsed": "Spring boot, angular, HTML, CSS, JS, BOOTSTRAP",
+        "image": "assets/images/default_project_image.jpg",
+        "category": "java",
+        "viewUrl": "#",
+        "githubUrl": "https://github.com/Shariarbup/spring-boot-angular-microservice"
+      },
+      {  
+        "id":20,
+        "title": "ANGULAR REST CRUD",
+        "description": "This is angular rest crud front end code",
+        "technologyUsed": "Angular, HTML, CSS, JS, BOOTSTRAP",
+        "image": "assets/images/default_project_image.jpg",
+        "category": "angular",
+        "viewUrl": "#",
+        "githubUrl": "https://github.com/Shariarbup/angular-rest-crud"
+      },
+      {  
+        "id":21,
+        "title": "SPRING BOOT REST CRUD",
+        "description": "This is spring boot rest crud back end code",
+        "technologyUsed": "SPRING BOOT, HTML, CSS, JS, BOOTSTRAP",
+        "image": "assets/images/default_project_image.jpg",
+        "category": "angular",
+        "viewUrl": "#",
+        "githubUrl": "https://github.com/Shariarbup/Spring-Boot-REST-and-Angular-CRUD"
+      },
+      {  
+        "id":22,
+        "title": "RESPONSIVE MENU BAR",
+        "description": "This is responsive menubar",
+        "technologyUsed": "HTML, CSS, JS",
+        "image": "assets/images/default_project_image.jpg",
+        "category": "html",
+        "viewUrl": "#",
+        "githubUrl": "https://github.com/Shariarbup/responsive-menubar"
+      },
+      {  
+        "id":23,
+        "title": "BUP IEE",
+        "description": "This is bup iee site",
+        "technologyUsed": "HTML, CSS, JS, BOOTSTRAP",
+        "image": "assets/images/default_project_image.jpg",
+        "category": "html",
+        "viewUrl": "#",
+        "githubUrl": "https://github.com/Shariarbup/BUP-IEEE"
+      },
+      {  
+        "id":24,
+        "title": "ANIMATED SEARCH BOX",
+        "description": "This is animated search box",
+        "technologyUsed": "HTML, CSS, JS",
+        "image": "assets/images/default_project_image.jpg",
+        "category": "html",
+        "viewUrl": "#",
+        "githubUrl": "https://github.com/Shariarbup/Animated-Search-Box"
+      },
+      {  
+        "id":25,
+        "title": "REACT WEATHER APPLICATION",
+        "description": "THIS IS WEATHER APPLICATION DEVELOPED BY REACT",
+        "technologyUsed": "REACT, HTML, CSS, JS",
+        "image": "assets/images/default_project_image.jpg",
+        "category": "react",
+        "viewUrl": "#",
+        "githubUrl": "https://github.com/Shariarbup/react-weather"
+      },
+      {  
+        "id":26,
+        "title": "REACT RESUME APPLICATION",
+        "description": "THIS IS REACT RESUME APPLICATION",
+        "technologyUsed": "REACT, HTML, CSS, JS",
+        "image": "assets/images/default_project_image.jpg",
+        "category": "react",
+        "viewUrl": "#",
+        "githubUrl": "https://github.com/Shariarbup/react-resume-deploy"
+      },
+      {  
+        "id":27,
+        "title": "Portfolio application",
+        "description": "THIS IS PORTFOLIO PROJECT",
+        "technologyUsed": "HTML, CSS, JS, BOOTSTRAP",
+        "image": "assets/images/default_project_image.jpg",
+        "category": "html",
+        "viewUrl": "#",
+        "githubUrl": "https://github.com/Shariarbup/alShariar"
+      },
+      {  
+        "id":28,
+        "title": "Hotel Reservation System",
+        "description": "THIS IS HOTEL RESERVATION SYSTEM DEVELOPED BY JAVA",
+        "technologyUsed": "JAVA",
+        "image": "assets/images/default_project_image.jpg",
+        "category": "java",
+        "viewUrl": "#",
+        "githubUrl": "https://github.com/Shariarbup/Hotel-Reservation"
       }
+      
   ]

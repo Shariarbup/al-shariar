@@ -1,50 +1,51 @@
 <section class="projects">
   <div class="container">
     <h2 class="section-title text-center mb-5">My Projects</h2>
-    <ul class="filter-list d-flex justify-content-center list-unstyled mb-4">
+    <ul class="filter-list d-flex flex-wrap justify-content-center list-unstyled mb-4">
       <li
-        class="btn btn-outline-primary mx-2"
+        class="btn btn-outline-primary mx-2 mb-2"
         [class.active]="activeFilter === 'All'"
         (click)="filterProjects('All')">
         All
       </li>
       <li
-        class="btn btn-outline-primary mx-2"
+        class="btn btn-outline-primary mx-2 mb-2"
         [class.active]="activeFilter === 'java'"
         (click)="filterProjects('java')">
         Java
       </li>
       <li
-        class="btn btn-outline-primary mx-2"
+        class="btn btn-outline-primary mx-2 mb-2"
         [class.active]="activeFilter === 'angular'"
         (click)="filterProjects('angular')">
         Angular
       </li>
       <li
-        class="btn btn-outline-primary mx-2"
+        class="btn btn-outline-primary mx-2 mb-2"
         [class.active]="activeFilter === 'python'"
         (click)="filterProjects('python')">
         Python
       </li>
       <li
-        class="btn btn-outline-primary mx-2"
+        class="btn btn-outline-primary mx-2 mb-2"
         [class.active]="activeFilter === 'react'"
         (click)="filterProjects('react')">
         React
       </li>
       <li
-        class="btn btn-outline-primary mx-2"
+        class="btn btn-outline-primary mx-2 mb-2"
         [class.active]="activeFilter === 'php'"
         (click)="filterProjects('php')">
         Php
       </li>
       <li
-        class="btn btn-outline-primary mx-2"
+        class="btn btn-outline-primary mx-2 mb-2"
         [class.active]="activeFilter === 'html'"
         (click)="filterProjects('html')">
         HTML/CSS/Bootstrap/JS
       </li>
     </ul>
+    
 
     <div class="row g-4 projects-grid">
       <div

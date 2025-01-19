@@ -287,6 +287,16 @@
         "category": "java",
         "viewUrl": "#",
         "githubUrl": "https://github.com/Shariarbup/Hotel-Reservation"
+      },
+      {  
+        "id":29,
+        "title": "English Story",
+        "description": "THIS IS ENGLISH SHORT STORY WEBSITE FOR LEARNING ENGLISH",
+        "technologyUsed": "Angular, HTML, CSS, JS, BOOTSTRAP",
+        "image": "assets/images/default_project_image.jpg",
+        "category": "angular",
+        "viewUrl": "https://shariarbup.github.io/story/",
+        "githubUrl": "https://github.com/Shariarbup/story"
       }
       
   ]

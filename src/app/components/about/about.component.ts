@@ -1,9 +1,10 @@
 import { ViewportScroller } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
 import { Education } from 'src/app/model/Education';
 import { Work } from 'src/app/model/Work';
 import { PortfolioServiceService } from 'src/app/services/portfolio-service.service';
+import * as AOS from 'aos';
 
 @Component({
   selector: 'app-about',
@@ -17,6 +18,7 @@ export class AboutComponent implements OnInit {
 
   constructor(private portfolioservice: PortfolioServiceService,
     private route: ActivatedRoute,
+    private router: Router,
     private viewportScroller: ViewportScroller
   ) {
     this.portfolioservice.getWorkExperienceData().subscribe((res: Work[]) => {
@@ -34,6 +36,15 @@ export class AboutComponent implements OnInit {
         this.viewportScroller.scrollToAnchor(fragment);
       }
     });
+    AOS.init({
+      duration: 2000, // Animation duration in milliseconds
+      // Offset (in px) from the original trigger point
+    });
+    this.router.events.subscribe(event => {
+          if (event instanceof NavigationEnd) {
+            AOS.refresh(); // Reinitialize AOS on route change
+          }
+        });
   }
 
 

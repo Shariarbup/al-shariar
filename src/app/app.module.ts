@@ -25,6 +25,7 @@ import { SiblingTwoComponent } from './practice/sibling-two/sibling-two.componen
 import { SiblingContainerComponent } from './practice/sibling-container/sibling-container.component';
 import { CertificateComponent } from './components/certificate/certificate.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 
 
 @NgModule({
@@ -57,7 +58,9 @@ import { FooterComponent } from './components/footer/footer.component';
     ReactiveFormsModule,
     BrowserAnimationsModule
   ],
-  providers: [PortfolioServiceService],
+  providers: [PortfolioServiceService,
+    {provide: LocationStrategy, useClass: HashLocationStrategy}
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

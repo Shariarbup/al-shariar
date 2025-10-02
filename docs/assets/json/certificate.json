@@ -46,8 +46,8 @@
     "description": "Learn about css basic",
     "image": "assets/images/certificate/css_sololearn.jpg",
     "category": "extracurricular",
-    "startDate": "",
-    "endDate": ""
+    "startDate": "02-05-2020",
+    "endDate": "02-05-2020"
   },
   {
     "id": 6,
@@ -56,18 +56,18 @@
     "description": "Learn about html basic",
     "image": "assets/images/certificate/html_sololearn.jpg",
     "category": "extracurricular",
-    "startDate": "",
-    "endDate": ""
+    "startDate": "21-06-2018",
+    "endDate": "21-06-2018"
   },
   {
     "id": 7,
     "title": "Java Basic From Hackerrank",
-    "institute": "SOLOLEARN",
+    "institute": "Hackerrank",
     "description": "Java basic from hackerrank",
     "image": "assets/images/certificate/java_basic_hackerrank.jpg",
     "category": "extracurricular",
-    "startDate": "",
-    "endDate": ""
+    "startDate": "30-04-2022",
+    "endDate": "30-04-2022"
   },
   {
     "id": 8,
@@ -76,8 +76,8 @@
     "description": "Learn basic java programming",
     "image": "assets/images/certificate/java_sololearn.jpg",
     "category": "extracurricular",
-    "startDate": "",
-    "endDate": ""
+    "startDate": "23-04-2025",
+    "endDate": "23-04-2025"
   },
   {
     "id": 9,
@@ -86,8 +86,8 @@
     "description": "Learn basic javascript",
     "image": "assets/images/certificate/javascript_sololearn.jpg",
     "category": "extracurricular",
-    "startDate": "",
-    "endDate": ""
+    "startDate": "29-06-2025",
+    "endDate": "29-06-2025"
   },
   {
     "id": 10,
@@ -106,8 +106,8 @@
     "description": "Learn basic python from sololearn",
     "image": "assets/images/certificate/python_core_sololearn.jpg",
     "category": "extracurricular",
-    "startDate": "",
-    "endDate": ""
+    "startDate": "15-05-2021",
+    "endDate": "15-05-2021"
   },
   {
     "id": 12,
@@ -116,8 +116,8 @@
     "description": "Completed 23 total hours of instruction under Navin Reddy",
     "image": "assets/images/certificate/java_spring_navin_reddy.png",
     "category": "extracurricular",
-    "startDate": "",
-    "endDate": ""
+    "startDate": "17-01-2024",
+    "endDate": "17-01-2024"
   },
   {
     "id": 13,
@@ -126,18 +126,18 @@
     "description": "Completed 4 total hours of instruction under Andrii Piatakha, Learn IT University",
     "image": "assets/images/certificate/java_spring_junit5.png",
     "category": "extracurricular",
-    "startDate": "",
-    "endDate": ""
+    "startDate": "17-01-2024",
+    "endDate": "17-01-2024"
   },
   {
     "id": 14,
     "title": "Empowering Success: Mastering Soft Skills for Thriving in the Modern Workplace",
-    "institute": "Brandsdash Skill Development Institute",
+    "institute": "Bangladesh Skill Development Institute",
     "description": "Successfully completed soft skills training program",
     "image": "assets/images/certificate/bjit_soft_skill.png",
     "category": "extracurricular",
-    "startDate": "",
-    "endDate": ""
+    "startDate": "09-09-2025",
+    "endDate": "09-09-2025"
   },
   {
     "id": 15,
@@ -146,8 +146,8 @@
     "description": "Successfully completed Foundation Training-2024 conducted by Office of the Registrar",
     "image": "assets/images/certificate/bup_foundation_training_2024.png",
     "category": "extracurricular",
-    "startDate": "",
-    "endDate": ""
+    "startDate": "27-10-2024",
+    "endDate": "10-11-2024"
   },
   {
     "id": 16,

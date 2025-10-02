@@ -1,27 +1,29 @@
 <section class="certificates py-1">
   <div class="container">
-    <h2 class="section-title text-center mb-5">My Certificates</h2>
+    <h2 class="section-title text-center mb-4">My Certificates</h2>
+
+    <!-- Search Box -->
+    <div class="text-center mb-4">
+      <input type="text" class="form-control w-50 mx-auto" placeholder="Search by title..." [(ngModel)]="searchText"
+        (input)="searchCertificates()">
+    </div>
+
+    <!-- Filter Buttons -->
     <ul class="filter-list d-flex justify-content-center list-unstyled mb-4">
       <li class="btn btn-outline-primary mx-2" [class.active]="activeFilter === 'All'"
-        (click)="filterCertificates('All')">
-        All
-      </li>
+        (click)="filterCertificates('All')">All</li>
       <li class="btn btn-outline-primary mx-2" [class.active]="activeFilter === 'academic'"
-        (click)="filterCertificates('academic')">
-        Academic
-      </li>
+        (click)="filterCertificates('academic')">Academic</li>
       <li class="btn btn-outline-primary mx-2" [class.active]="activeFilter === 'extracurricular'"
-        (click)="filterCertificates('extracurricular')">
-        Extra-curricular
-      </li>
+        (click)="filterCertificates('extracurricular')">Extra-curricular</li>
     </ul>
 
+    <!-- Certificate Grid -->
     <div class="row g-4 certificates-grid">
       <div class="col-md-4 certificate-card" *ngFor="let certificate of filteredCertificates; let i = index" [@fadeIn]>
         <div class="card h-100 shadow-lg">
           <img [src]="certificate.image" [alt]="certificate.title" class="card-img-top rounded"
             (click)="viewFullImage(certificate.image, i)">
-
           <div class="card-body">
             <h5 class="card-title">{{ certificate.title }}</h5>
             <p class="card-text">{{ certificate.description }}</p>
@@ -31,16 +33,17 @@
     </div>
   </div>
 
-  <!-- Modal for Full Image -->
+  <!-- Modal -->
   <div class="modal fade" id="imageModal" tabindex="-1" aria-hidden="true">
     <div class="modal-dialog modal-xl modal-dialog-centered">
       <div class="modal-content bg-transparent border-0 position-relative">
-  
+
         <!-- Close Button -->
         <div class="modal-header border-0 p-0 position-absolute top-0 end-0 z-2">
-          <button type="button" class="btn-close btn-close-white m-3" data-bs-dismiss="modal" aria-label="Close"></button>
+          <button type="button" class="btn-close btn-close-white m-3" data-bs-dismiss="modal"
+            aria-label="Close"></button>
         </div>
-  
+
         <!-- Navigation Buttons -->
         <button class="nav-btn left" (click)="prevImage()">
           <i class="fas fa-chevron-left"></i>
@@ -48,15 +51,12 @@
         <button class="nav-btn right" (click)="nextImage()">
           <i class="fas fa-chevron-right"></i>
         </button>
-  
+
         <!-- Image -->
         <div class="modal-body text-center p-0">
           <img [src]="selectedImage" alt="Certificate Full View" class="img-fluid modal-image">
         </div>
-  
       </div>
     </div>
   </div>
-  
-
 </section>

@@ -1,6 +1,7 @@
 <div class="pb-5 main">
     <!-- Hero Section -->
-    <div class="row align-items-center py-5 hero" style="background: linear-gradient(120deg, #6595f6 0%, #fda085 100%);" data-aos="fade-up">
+    <div class="row align-items-center py-5 hero" style="background: linear-gradient(120deg, #6595f6 0%, #fda085 100%);"
+        data-aos="fade-up">
         <div class="col-lg-6 text-center text-lg-left py-5">
             <h3 class="intro-text">
                 <small class="greeting">Hello, I'm</small> <br>
@@ -11,11 +12,14 @@
                 <button class="btn btn-primary btn1 mx-2" routerLink="/project">My Work</button>
                 <button class="btn btn-outline-primary btn2" routerLink="/contact">Hire Me</button>
                 <br>
-                <a class="btn btn-outline-primary btn3 m-2" target="_blank"  href="https://drive.google.com/file/d/1MKA9hgHsGRJB45BzaLIeiNC5NBc2Znco/view?usp=sharing">Download CV</a>
+                <a class="btn btn-outline-primary btn3 m-2" target="_blank"
+                    href="https://drive.google.com/file/d/1MKA9hgHsGRJB45BzaLIeiNC5NBc2Znco/view?usp=sharing">Download
+                    CV</a>
             </div>
         </div>
         <div class="col-lg-6 text-center">
-            <img src="assets/images/profile_pic_2.jpg" class="profilePic square shadow-lg" alt="Profile Picture" width="300">
+            <img src="assets/images/profile_pic_2.jpg" class="profilePic square shadow-lg" alt="Profile Picture"
+                width="300">
         </div>
     </div>
 
@@ -27,43 +31,75 @@
                 Hi, I am <span class="font-weight-bold">Md. Al Shariar</span>, a professional software developer.
                 <br><br>
                 Craft web applications using Spring Boot and Angular (Frontend and Backend).
-                Strong foundation in HTML, CSS, JavaScript 
-                Passionate about problem-solving, learning about DSA, algorithms, design patterns, DBMS, System design, Microservice architecture, and DevOps (AWS, Azure)
+                Strong foundation in HTML, CSS, JavaScript
+                Passionate about problem-solving, learning about DSA, algorithms, design patterns, DBMS, System design,
+                Microservice architecture, and DevOps (AWS, Azure)
             </p>
         </div>
     </div>
 
     <!-- Work Section -->
-    <div id="work-id" class="row work-section py-5" style="background: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);" data-aos="fade-right">
+
+    <div id="work-id" class="row work-section py-5" style="background: linear-gradient(135deg, #84fab0, #8fd3f4);"
+        data-aos="fade-up">
+
         <div class="col-12 py-2">
-            <h1 class="text-center section-title">Work</h1>
-            <div class="row mt-5">
-                <div class="col-lg-6 mb-4" *ngFor="let work of works">
-                    <div class="work-card p-4 shadow-sm">
-                        <h4>{{work.instituteName}}</h4>
-                        <p><span class="font-weight-bold">Designation:</span> {{work.designation}}</p>
-                        <p><span class="font-weight-bold">Duration:</span> {{work.duration}}</p>
+            <h1 class="text-center section-title mb-5 fw-bold text-dark">
+                <i class="fas fa-briefcase me-2"></i> Work Experience
+            </h1>
+
+            <div class="row g-4 justify-content-center">
+                <div class="col-lg-5 col-md-6 col-sm-12" *ngFor="let work of works">
+                    <div class="work-card p-4 rounded-4 shadow-lg position-relative">
+
+                        <!-- Company Icon -->
+                        <div class="work-badge">
+                            <i class="fas fa-building"></i>
+                        </div>
+
+                        <!-- Institute Name -->
+                        <h3 class="fw-bold text-gradient mb-3">{{work.instituteName}}</h3>
+
+                        <!-- Designation -->
+                        <p class="mb-2">
+                            <i class="fas fa-user-tie me-2 text-primary"></i>
+                            <span class="fw-semibold">Designation:</span> {{work.designation}}
+                        </p>
+
+                        <!-- Duration -->
+                        <p>
+                            <i class="fas fa-calendar-alt me-2 text-danger"></i>
+                            <span class="fw-semibold">Duration:</span> {{work.duration}}
+                        </p>
+
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
+
+
     <!-- Education Section -->
-    <div id="education-id" class="row education-section py-5" style="background: #e3f2fd;" data-aos="zoom-in">
+
+    <div id="education-id" class="education-section py-5" style="background: linear-gradient(135deg, #e3f2fd, #f0f7ff);"
+        data-aos="zoom-in">
         <div class="col-12 py-2">
-            <h1 class="text-center section-title">Education</h1>
-            <div class="row mt-5">
-                <div class="col-lg-6 mb-4" *ngFor="let edu of educations">
-                    <div class="education-card p-4 shadow-sm">
-                        <h4 class="text-center mb-3 pb-3" style="border-bottom: 3px solid #E3F2FD;">{{edu.instituteType}}</h4>
-                        <p><span class="font-weight-bold">Institute Name:</span> {{edu.instituteName}}</p>
-                        <p><span class="font-weight-bold">Subject:</span> {{edu.subject}}</p>
-                        <p><span class="font-weight-bold">GPA/CGPA:</span> {{edu.gpa}}</p>
-                        <p><span class="font-weight-bold">Passing Year:</span> {{edu.passingYear}}</p>
+            <h1 class="text-center section-title mb-5 fw-bold text-primary">
+                <i class="fas fa-graduation-cap me-2"></i> Education
+            </h1>
+            <div class="row g-4 justify-content-center">
+                <div class="col-lg-5 col-md-6" *ngFor="let edu of educations">
+                    <div class="glass-card shadow-lg p-4 rounded-4">
+                        <h4 class="fw-bold text-center text-primary mb-3">{{edu.instituteType}}</h4>
+                        <p><i class="fas fa-school me-2 text-secondary"></i><b>Institute:</b> {{edu.instituteName}}</p>
+                        <p><i class="fas fa-book me-2 text-success"></i><b>Subject:</b> {{edu.subject}}</p>
+                        <p><i class="fas fa-star me-2 text-warning"></i><b>GPA/CGPA:</b> {{edu.gpa}}</p>
+                        <p><i class="fas fa-calendar me-2 text-danger"></i><b>Year:</b> {{edu.passingYear}}</p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
 </div>

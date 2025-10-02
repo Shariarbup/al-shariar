@@ -101,34 +101,62 @@ body {
     from {
         opacity: 0;
     }
+
     to {
         opacity: 1;
     }
 }
 
-/* Work & Education Sections */
-.work-card,
-.education-card {
-    background: white;
-    border-radius: 8px;
+
+/* Work Sections */
+
+
+.work-card {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    transition: all 0.4s ease;
+    color: #333;
+}
+
+.work-card:hover {
+    transform: translateY(-12px) scale(1.03);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+.work-badge {
+    position: absolute;
+    top: -25px;
+    right: 20px;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #00796b, #26a69a);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    font-size: 20px;
+}
+
+.text-gradient {
+    background: linear-gradient(90deg, #0072ff, #00c6ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+/* Education */
+.glass-card {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.25);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.work-card:hover,
-.education-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-}
-
-.font-weight-bold {
-    color: #4facfe;
-}
-
-/* Spacing & Responsiveness */
-.mt-5 {
-    margin-top: 2.5rem !important;
-}
-
-.mb-4 {
-    margin-bottom: 1.5rem !important;
+.glass-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
 }

@@ -89,6 +89,46 @@
       },
       {
         "id": 12,
+        "title": "Java and Spring Framework for Beginners with Spring Boot",
+        "institute": "Udemy",
+        "description": "Completed 23 total hours of instruction under Navin Reddy",
+        "image": "assets/images/certificate/java_spring_navin_reddy.png",
+        "category": "extracurricular"
+      },
+      {
+        "id": 13,
+        "title": "JUnit 5, Mockito, PowerMock, TDD, BDD & ATTD",
+        "institute": "Udemy",
+        "description": "Completed 4 total hours of instruction under Andrii Piatakha, Learn IT University",
+        "image": "assets/images/certificate/java_spring_junit5.png",
+        "category": "extracurricular"
+      },
+      {
+        "id": 14,
+        "title": "Empowering Success: Mastering Soft Skills for Thriving in the Modern Workplace",
+        "institute": "Brandsdash Skill Development Institute",
+        "description": "Successfully completed soft skills training program",
+        "image": "assets/images/certificate/bjit_soft_skill.png",
+        "category": "extracurricular"
+      },  
+      {
+        "id": 15,
+        "title": "Foundation Training-2024",
+        "institute": "Bangladesh University of Professionals",
+        "description": "Successfully completed Foundation Training-2024 conducted by Office of the Registrar",
+        "image": "assets/images/certificate/bup_foundation_training_2024.png",
+        "category": "extracurricular"
+      },    
+      {
+        "id": 16,
+        "title": "Computer Science and Engineering (CSE) Equivalence Certificate",
+        "institute": "Bangladesh University of Professionals",
+        "description": "B.Sc. in Information and Communication Engineering (ICE) with CGPA 3.64/4.00, considered equivalent to B.Sc. in CSE",
+        "image": "assets/images/certificate/bup_cse_equivalent_certificate.png",
+        "category": "academic"
+      },  
+      {
+        "id": 17,
         "title": "UNDERGRADE",
         "institute": "BUP",
         "description": "BSc. in Information & Communication Engineer(ICE)",
@@ -96,7 +136,7 @@
         "category": "academic"
       },
       {
-        "id": 13,
+        "id": 18,
         "title": "HSC",
         "institute": "Bogura Cantonment Public School & College",
         "description": "Science Group",
@@ -104,7 +144,7 @@
         "category": "academic"
       },
       {
-        "id": 14,
+        "id": 19,
         "title": "SSC",
         "institute": "Bogura Cantonment Board High School",
         "description": "Science Group",

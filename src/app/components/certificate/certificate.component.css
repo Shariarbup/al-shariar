@@ -27,7 +27,36 @@
   transform: scale(1.1);
 }
 
-.modal-body img {
-  max-height: 80vh;
+.modal-image {
+  width: 90vw;
+  max-height: 90vh;
   object-fit: contain;
+  border-radius: 12px;
+  box-shadow: 0 12px 40px rgba(0,0,0,0.5);
+}
+
+.nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.4);
+  border: none;
+  color: white;
+  font-size: 2rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border-radius: 50%;
+  z-index: 1055;
+}
+
+.nav-btn:hover {
+  background: rgba(0,0,0,0.7);
+}
+
+.nav-btn.left {
+  left: 10px;
+}
+
+.nav-btn.right {
+  right: 10px;
 }

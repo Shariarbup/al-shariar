@@ -34,22 +34,22 @@ export class ContactComponent implements OnInit{
   }
 
   sendEmail() {
-    if (this.contactForm.valid) {
-      this.isLoading = true;
-      emailjs.send('service_lnrq7a9', 'template_koubble', this.contactForm.value, 'TD2FakbB0iy1gZxAq')
-        .then(response => {
-          console.log('Email sent!', response);
-          alert('Your message has been sent!');
-          this.contactForm.reset();
-        })
-        .catch(error => {
-          console.error('Error sending email', error);
-          alert('Failed to send email.');
-        })
-        .finally(() => {
-          this.isLoading = false; // Hide loading state
-        });;
-    }
+    // if (this.contactForm.valid) {
+    //   this.isLoading = true;
+    //   emailjs.send('service_lnrq7a9', 'template_koubble', this.contactForm.value, '')
+    //     .then(response => {
+    //       console.log('Email sent!', response);
+    //       alert('Your message has been sent!');
+    //       this.contactForm.reset();
+    //     })
+    //     .catch(error => {
+    //       console.error('Error sending email', error);
+    //       alert('Failed to send email.');
+    //     })
+    //     .finally(() => {
+    //       this.isLoading = false; // Hide loading state
+    //     });;
+    // }
   }
 
 

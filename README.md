@@ -40,4 +40,9 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 - use the above command
 
+# Run project
+
+- ng serve
+- browse: http://localhost:4200/#/
+
 

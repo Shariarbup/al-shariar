@@ -9,5 +9,8 @@
     {"id": 8, "name": "Python Django", "percentage": 60},
     {"id": 9, "name": "Docker", "percentage": 50},
     {"id": 10, "name": "CI/CD pipeline", "percentage": 60},
-    {"id": 11, "name": "Version controlling", "percentage": 100}
+    {"id": 11, "name": "Version controlling", "percentage": 100},
+    {"id": 12, "name": "CCNA", "percentage": 90},
+    {"id": 13, "name": "Network Architechture", "percentage": 50},
+    {"id": 14, "name": "Linux Server", "percentage": 30}
 ]

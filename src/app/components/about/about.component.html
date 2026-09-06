@@ -44,12 +44,15 @@
         data-aos="fade-up">
 
         <div class="col-12 py-2">
+
             <h1 class="text-center section-title mb-5 fw-bold text-dark">
                 <i class="fas fa-briefcase me-2"></i> Work Experience
             </h1>
 
             <div class="row g-4 justify-content-center">
+
                 <div class="col-lg-5 col-md-6 col-sm-12" *ngFor="let work of works">
+
                     <div class="work-card p-4 rounded-4 shadow-lg position-relative">
 
                         <!-- Company Icon -->
@@ -58,26 +61,110 @@
                         </div>
 
                         <!-- Institute Name -->
-                        <h3 class="fw-bold text-gradient mb-3">{{work.instituteName}}</h3>
+                        <h3 class="fw-bold text-gradient mb-3">
+                            {{work.instituteName}}
+                        </h3>
 
                         <!-- Designation -->
                         <p class="mb-2">
                             <i class="fas fa-user-tie me-2 text-primary"></i>
-                            <span class="fw-semibold">Designation:</span> {{work.designation}}
+                            <span class="fw-semibold">Designation:</span>
+                            {{work.designation}}
                         </p>
 
                         <!-- Duration -->
-                        <p>
+                        <p class="mb-3">
                             <i class="fas fa-calendar-alt me-2 text-danger"></i>
-                            <span class="fw-semibold">Duration:</span> {{work.duration}}
+                            <span class="fw-semibold">Duration:</span>
+                            {{work.duration}}
                         </p>
 
+                        <!-- Workplace Memory Button -->
+                        <button class="memory-btn" (click)="openWorkplaceMemory(work)">
+
+                            <i class="fas fa-camera-retro me-2"></i>
+                            Workplace Memories
+                        </button>
+
                     </div>
+
                 </div>
+
             </div>
         </div>
     </div>
 
+
+    <!-- ================= MEMORY MODAL ================= -->
+
+    <div class="memory-overlay" *ngIf="selectedWork" (click)="closeWorkplaceMemory()">
+
+        <div class="memory-modal" (click)="$event.stopPropagation()">
+
+            <!-- Close Button -->
+            <button class="memory-close" (click)="closeWorkplaceMemory()">
+                <i class="fas fa-times"></i>
+            </button>
+
+            <!-- Title -->
+            <h2 class="memory-title">
+                <i class="fas fa-building me-2"></i>
+                {{selectedWork.instituteName}}
+            </h2>
+
+            <p class="memory-subtitle">
+                <i class="fas fa-camera me-2"></i>
+                Workplace Memories
+            </p>
+
+            <!-- Photos -->
+            <div class="memory-gallery">
+
+                <div class="memory-photo" *ngFor="let photo of selectedWork.photos" (click)="showWorkplaceImage(photo)">
+
+                    <img [src]="photo" [alt]="selectedWork.instituteName">
+
+                </div>
+
+            </div>
+
+        </div>
+        <!-- FULL SCREEN IMAGE VIEWER -->
+
+        <!-- FULL SCREEN IMAGE VIEWER -->
+
+        <div class="fullscreen-image-overlay" *ngIf="selectedImage" (click)="hideWorkplaceImage()">
+
+            <!-- Previous Button -->
+            <button class="image-nav image-prev" (click)="$event.stopPropagation(); previousWorkplaceImage()">
+
+                <i class="fas fa-chevron-left"></i>
+
+            </button>
+
+
+            <!-- Full Screen Image -->
+            <img class="fullscreen-image" [src]="selectedImage" [alt]="selectedWork?.instituteName"
+                (click)="$event.stopPropagation()">
+
+
+            <!-- Next Button -->
+            <button class="image-nav image-next" (click)="$event.stopPropagation(); nextWorkplaceImage()">
+
+                <i class="fas fa-chevron-right"></i>
+
+            </button>
+
+
+            <!-- Close Full Screen -->
+            <button class="fullscreen-close" (click)="$event.stopPropagation(); hideWorkplaceImage()">
+
+                <i class="fas fa-times"></i>
+
+            </button>
+
+        </div>
+    </div>
 
 
     <!-- Education Section -->

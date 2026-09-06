@@ -15,6 +15,17 @@ export class AboutComponent implements OnInit {
   works: Work[] = [];
 
   educations: Education[] = [];
+  selectedWork: any = null;
+  selectedImage: string | null = null;
+  currentImageIndex: number = 0;
+
+  openFullImage(image: string): void {
+    this.selectedImage = image;
+  }
+
+  closeFullImage(): void {
+    this.selectedImage = null;
+  }
 
   constructor(private portfolioservice: PortfolioServiceService,
     private route: ActivatedRoute,
@@ -41,12 +52,53 @@ export class AboutComponent implements OnInit {
       // Offset (in px) from the original trigger point
     });
     this.router.events.subscribe(event => {
-          if (event instanceof NavigationEnd) {
-            AOS.refresh(); // Reinitialize AOS on route change
-          }
-        });
+      if (event instanceof NavigationEnd) {
+        AOS.refresh(); // Reinitialize AOS on route change
+      }
+    });
   }
 
+  openWorkplaceMemory(work: any): void {
+    this.selectedWork = work;
+  }
+
+  closeWorkplaceMemory(): void {
+    this.selectedWork = null;
+  }
+
+  showWorkplaceImage(image: string): void {
+    this.selectedImage = image;
+    this.currentImageIndex = this.selectedWork.photos.indexOf(image);
+  }
+
+  hideWorkplaceImage(): void {
+    this.selectedImage = null;
+  }
+
+  nextWorkplaceImage(): void {
+    if (!this.selectedWork?.photos?.length) {
+      return;
+    }
+
+    this.currentImageIndex =
+      (this.currentImageIndex + 1) % this.selectedWork.photos.length;
+
+    this.selectedImage =
+      this.selectedWork.photos[this.currentImageIndex];
+  }
+
+  previousWorkplaceImage(): void {
+    if (!this.selectedWork?.photos?.length) {
+      return;
+    }
+
+    this.currentImageIndex =
+      (this.currentImageIndex - 1 + this.selectedWork.photos.length) %
+      this.selectedWork.photos.length;
+
+    this.selectedImage =
+      this.selectedWork.photos[this.currentImageIndex];
+  }
 
 
 }

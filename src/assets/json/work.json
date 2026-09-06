@@ -3,25 +3,47 @@
         "id": 4,
         "instituteName":"Bangladesh University Of Professionals(BUP)", 
         "designation": "Assistant Programmer", 
-        "duration":"Oct 2024-Present"
+        "duration":"Oct 2024-Present",
+        "photos": [
+            
+        ]
     },
     {
         "id": 3,
         "instituteName":"BJIT Ltd", 
         "designation": "Software Engineer (Full Stack Web Developer)", 
-        "duration":"Apr 2022-Oct 2024"
+        "duration":"Apr 2022-Oct 2024",
+        "photos": [
+            "assets/images/workplace/bjit/bjit-01.jpeg",
+            "assets/images/workplace/bjit/bjit-02.jpg",
+            "assets/images/workplace/bjit/bjit-03.jpg",
+            "assets/images/workplace/bjit/bjit-04.jpg",
+            "assets/images/workplace/bjit/bjit-05.jpg",
+            "assets/images/workplace/bjit/bjit-06.jpeg",
+            "assets/images/workplace/bjit/bjit-07.jpeg",
+            "assets/images/workplace/bjit/bjit-08.jpg",
+            "assets/images/workplace/bjit/bjit-09.jpg",
+            "assets/images/workplace/bjit/bjit-10.jpg",
+            "assets/images/workplace/bjit/bjit-11.jpg",
+            "assets/images/workplace/bjit/bjit-12.jpeg",
+            "assets/images/workplace/bjit/bjit-13.jpeg",
+            "assets/images/workplace/bjit/bjit-14.jpeg",
+            "assets/images/workplace/bjit/bjit-15.jpeg"
+        ]
     },
     {
         "id": 2,
         "instituteName":"Isharify", 
         "designation": "Web Development Internship", 
-        "duration":"Jan 2022-Apr 2022"
+        "duration":"Jan 2022-Apr 2022",
+        "photos": []
     },
     {
         "id": 1,
         "instituteName":"Vivo Bangladesh", 
         "designation": "Assistant Engineer", 
-        "duration":"Aug 2021-Sep 2021"
+        "duration":"Aug 2021-Sep 2021",
+        "photos": []
     }
 
 ]

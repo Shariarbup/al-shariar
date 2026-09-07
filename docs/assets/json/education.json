@@ -1,6 +1,14 @@
 [
-    {
+     {
         "id": 1,
+        "instituteType": "University", 
+        "instituteName":"Jagannath University(JNU)", 
+        "subject": "MSc. in Computer Science & Engineering(CSE)", 
+        "gpa": "-",  
+        "passingYear":"2025-2026"
+    },
+    {
+        "id": 2,
         "instituteType": "University", 
         "instituteName":"Bangladesh University Of Professionals(BUP)", 
         "subject": "BSc. in Information & Communication Engineering(ICE)", 
@@ -8,7 +16,7 @@
         "passingYear":"2016-2019"
     },
     {
-        "id": 2,
+        "id": 3,
         "instituteType": "College",
         "instituteName":"Bogura Cantonment Public School & College, Bogura", 
         "subject": "Science", 
@@ -16,7 +24,7 @@
         "passingYear":"2012-2014"
     },
     {
-        "id": 3,
+        "id": 4,
         "instituteType": "School", 
         "instituteName":"Bogura Cantonment Board High School, Bogura", 
         "subject": "Science", 

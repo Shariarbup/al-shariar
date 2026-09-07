@@ -189,4 +189,210 @@
         </div>
     </div>
 
+    <!-- =========================================
+     RECOMMENDATIONS SECTION
+========================================= -->
+
+    <section id="recommendations" class="recommendation-section py-5" data-aos="zoom-in">
+
+        <div class="container">
+
+            <!-- Section Header -->
+            <div class="text-center mb-5" data-aos="fade-up">
+
+                <span class="recommendation-label">
+                    <i class="fas fa-star me-2"></i>
+                    PROFESSIONAL RECOMMENDATIONS
+                </span>
+
+                <h1 class="recommendation-title mt-3">
+                    Recommendations & Testimonials
+                </h1>
+
+                <p class="recommendation-subtitle">
+                    Professional recommendations and appreciation
+                    from my workplace and colleagues.
+                </p>
+
+            </div>
+
+
+            <!-- =====================================
+             FIRST 4 RECOMMENDATIONS
+        ====================================== -->
+
+            <div class="row g-4 justify-content-center">
+
+                <div class="col-lg-3 col-md-6 col-sm-12" *ngFor="let recommendation of recommendations | slice:0:4"
+                    data-aos="fade-up">
+
+                    <div class="recommendation-card">
+
+                        <!-- Image -->
+                        <div class="recommendation-image-wrapper"
+                            (click)="showRecommendationImage(recommendation.image)">
+
+                            <img [src]="recommendation.image" [alt]="recommendation.title" class="recommendation-image">
+
+                            <div class="recommendation-overlay">
+
+                                <div class="view-image-btn">
+                                    <i class="fas fa-expand me-2"></i>
+                                    View
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- Card Footer -->
+                        <div class="recommendation-footer">
+
+                            <div>
+                                <i class="fas fa-certificate me-2"></i>
+                                {{ recommendation.title }}
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- =====================================
+             SHOW MORE BUTTON
+        ====================================== -->
+
+            <div class="text-center mt-5" *ngIf="recommendations.length > 4">
+
+                <button class="show-more-recommendation" (click)="openRecommendationsModal()">
+
+                    <i class="fas fa-images me-2"></i>
+
+                    Show More Recommendations
+
+                    <i class="fas fa-arrow-right ms-2"></i>
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================
+     ALL RECOMMENDATIONS MODAL
+========================================= -->
+
+    <div class="recommendation-modal-overlay" *ngIf="showRecommendationsModal" (click)="closeRecommendationsModal()">
+
+        <div class="recommendation-modal" (click)="$event.stopPropagation()">
+
+            <!-- Modal Header -->
+
+            <div class="recommendation-modal-header">
+
+                <div>
+
+                    <h2>
+                        <i class="fas fa-images me-2"></i>
+                        Recommendations
+                    </h2>
+
+                    <p>
+                        My professional recommendations and testimonials
+                    </p>
+
+                </div>
+
+
+                <!-- Close Modal -->
+
+                <button class="recommendation-modal-close" (click)="closeRecommendationsModal()">
+
+                    <i class="fas fa-times"></i>
+
+                </button>
+
+            </div>
+
+
+            <!-- =====================================
+             ALL IMAGES
+        ====================================== -->
+
+            <div class="recommendation-modal-gallery">
+
+                <div class="recommendation-modal-image" *ngFor="let recommendation of recommendations"
+                    (click)="showRecommendationImage(recommendation.image)">
+
+                    <img [src]="recommendation.image" [alt]="recommendation.title">
+
+                    <div class="modal-image-overlay">
+
+                        <i class="fas fa-expand"></i>
+
+                        <span>
+                            View
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================================
+     FULL SCREEN IMAGE VIEWER
+========================================= -->
+
+    <div class="recommendation-fullscreen" *ngIf="selectedRecommendationImage" (click)="hideRecommendationImage()">
+
+
+        <!-- Previous -->
+
+        <button class="recommendation-nav recommendation-prev"
+            (click)="$event.stopPropagation(); previousRecommendation()">
+
+            <i class="fas fa-chevron-left"></i>
+
+        </button>
+
+
+        <!-- Full Screen Image -->
+
+        <img [src]="selectedRecommendationImage" class="recommendation-full-image" alt="Professional Recommendation"
+            (click)="$event.stopPropagation()">
+
+
+        <!-- Next -->
+
+        <button class="recommendation-nav recommendation-next" (click)="$event.stopPropagation(); nextRecommendation()">
+
+            <i class="fas fa-chevron-right"></i>
+
+        </button>
+
+
+        <!-- Close Full Screen -->
+
+        <button class="recommendation-close" (click)="$event.stopPropagation(); hideRecommendationImage()">
+
+            <i class="fas fa-times"></i>
+
+        </button>
+
+    </div>
+
 </div>

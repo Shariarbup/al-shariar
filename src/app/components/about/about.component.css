@@ -659,3 +659,1030 @@ body {
     transform: translateY(-8px) scale(1.02);
     box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
 }
+
+/* =========================================================
+   RECOMMENDATIONS & TESTIMONIALS SECTION
+========================================================= */
+
+.recommendation-section {
+  position: relative;
+  overflow: hidden;
+  padding: 80px 0;
+
+  /* Different from Work Experience */
+  background:
+    radial-gradient(
+      circle at 10% 15%,
+      rgba(255, 255, 255, 0.95),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 90% 85%,
+      rgba(255, 255, 255, 0.8),
+      transparent 30%
+    ),
+    linear-gradient(
+      135deg,
+      #f5f3ff 0%,
+      #fce7f3 50%,
+      #ede9fe 100%
+    );
+}
+
+/* Decorative background circle - left */
+.recommendation-section::before {
+  content: "";
+  position: absolute;
+  width: 320px;
+  height: 320px;
+
+  background: rgba(139, 92, 246, 0.12);
+
+  border-radius: 50%;
+
+  top: -130px;
+  left: -100px;
+
+  filter: blur(25px);
+
+  pointer-events: none;
+}
+
+/* Decorative background circle - right */
+.recommendation-section::after {
+  content: "";
+  position: absolute;
+  width: 380px;
+  height: 380px;
+
+  background: rgba(236, 72, 153, 0.10);
+
+  border-radius: 50%;
+
+  bottom: -160px;
+  right: -120px;
+
+  filter: blur(30px);
+
+  pointer-events: none;
+}
+
+
+/* Keep all content above background decorations */
+.recommendation-section > .container {
+  position: relative;
+  z-index: 2;
+}
+
+
+/* =========================================================
+   SECTION HEADER
+========================================================= */
+
+.recommendation-label {
+  display: inline-flex;
+  align-items: center;
+
+  padding: 8px 18px;
+
+  border-radius: 50px;
+
+  background: rgba(124, 58, 237, 0.10);
+
+  color: #7c3aed;
+
+  font-size: 0.82rem;
+  font-weight: 800;
+
+  letter-spacing: 1.2px;
+
+  border: 1px solid rgba(124, 58, 237, 0.15);
+
+  box-shadow: 0 5px 15px rgba(124, 58, 237, 0.08);
+}
+
+
+.recommendation-title {
+  font-size: 2.6rem;
+
+  font-weight: 800;
+
+  margin-bottom: 12px;
+
+  background: linear-gradient(
+    90deg,
+    #7c3aed,
+    #db2777
+  );
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  background-clip: text;
+}
+
+
+.recommendation-subtitle {
+  max-width: 650px;
+
+  margin: 0 auto;
+
+  color: #64748b;
+
+  font-size: 1.05rem;
+
+  line-height: 1.7;
+}
+
+
+/* =========================================================
+   RECOMMENDATION CARD
+========================================================= */
+
+.recommendation-card {
+  position: relative;
+
+  background: rgba(255, 255, 255, 0.92);
+
+  border-radius: 20px;
+
+  overflow: hidden;
+
+  border: 1px solid rgba(255, 255, 255, 0.9);
+
+  box-shadow:
+    0 10px 30px rgba(76, 29, 149, 0.10),
+    0 3px 10px rgba(0, 0, 0, 0.05);
+
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
+
+  height: 100%;
+}
+
+
+.recommendation-card:hover {
+  transform: translateY(-8px);
+
+  box-shadow:
+    0 20px 45px rgba(76, 29, 149, 0.18),
+    0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+
+/* =========================================================
+   RECOMMENDATION IMAGE
+   Landscape / Wide Image
+========================================================= */
+
+.recommendation-image-wrapper {
+  position: relative;
+
+  width: 100%;
+
+  /* Perfect for landscape screenshots */
+  aspect-ratio: 16 / 9;
+
+  overflow: hidden;
+
+  background: #f8fafc;
+
+  cursor: zoom-in;
+}
+
+
+.recommendation-image {
+  width: 100%;
+  height: 100%;
+
+  /* Do not crop recommendation screenshots */
+  object-fit: contain;
+
+  display: block;
+
+  transition:
+    transform 0.5s ease,
+    filter 0.5s ease;
+}
+
+
+.recommendation-card:hover .recommendation-image {
+  transform: scale(1.03);
+
+  filter: brightness(0.88);
+}
+
+
+/* =========================================================
+   IMAGE HOVER OVERLAY
+========================================================= */
+
+.recommendation-overlay {
+  position: absolute;
+
+  inset: 0;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  background: rgba(76, 29, 149, 0.35);
+
+  opacity: 0;
+
+  transition: opacity 0.3s ease;
+}
+
+
+.recommendation-image-wrapper:hover .recommendation-overlay {
+  opacity: 1;
+}
+
+
+.view-image-btn {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 11px 20px;
+
+  border-radius: 50px;
+
+  background: rgba(255, 255, 255, 0.95);
+
+  color: #7c3aed;
+
+  font-size: 0.9rem;
+
+  font-weight: 700;
+
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+
+  transform: translateY(10px);
+
+  transition: transform 0.3s ease;
+}
+
+
+.recommendation-image-wrapper:hover .view-image-btn {
+  transform: translateY(0);
+}
+
+
+/* =========================================================
+   CARD FOOTER
+========================================================= */
+
+.recommendation-footer {
+  padding: 16px 18px;
+
+  background: #ffffff;
+
+  color: #334155;
+
+  font-size: 0.92rem;
+
+  font-weight: 600;
+
+  border-top: 1px solid #f1f5f9;
+}
+
+
+.recommendation-footer i {
+  color: #db2777;
+}
+
+
+/* =========================================================
+   SHOW MORE BUTTON
+========================================================= */
+
+.show-more-recommendation {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 13px 25px;
+
+  border: none;
+
+  border-radius: 50px;
+
+  background: linear-gradient(
+    90deg,
+    #7c3aed,
+    #db2777
+  );
+
+  color: #ffffff;
+
+  font-size: 0.95rem;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 8px 20px rgba(124, 58, 237, 0.25);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+
+.show-more-recommendation:hover {
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 12px 28px rgba(124, 58, 237, 0.35);
+}
+
+
+.show-more-recommendation i {
+  transition: transform 0.3s ease;
+}
+
+
+.show-more-recommendation:hover .fa-arrow-right {
+  transform: translateX(5px);
+}
+
+
+/* =========================================================
+   ALL RECOMMENDATIONS MODAL
+========================================================= */
+
+.recommendation-modal-overlay {
+  position: fixed;
+
+  inset: 0;
+
+  z-index: 9998;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 25px;
+
+  background: rgba(15, 23, 42, 0.75);
+
+  backdrop-filter: blur(8px);
+
+  -webkit-backdrop-filter: blur(8px);
+
+  animation: recommendationFadeIn 0.25s ease;
+}
+
+
+/* Modal container */
+.recommendation-modal {
+  width: 100%;
+
+  max-width: 1150px;
+
+  max-height: 90vh;
+
+  overflow-y: auto;
+
+  background: #ffffff;
+
+  border-radius: 24px;
+
+  box-shadow:
+    0 30px 80px rgba(0, 0, 0, 0.30);
+
+  animation: recommendationModalIn 0.3s ease;
+}
+
+
+/* =========================================================
+   MODAL HEADER
+========================================================= */
+
+.recommendation-modal-header {
+  position: sticky;
+
+  top: 0;
+
+  z-index: 5;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 20px;
+
+  padding: 22px 28px;
+
+  background: rgba(255, 255, 255, 0.96);
+
+  backdrop-filter: blur(10px);
+
+  -webkit-backdrop-filter: blur(10px);
+
+  border-bottom: 1px solid #e2e8f0;
+}
+
+
+.recommendation-modal-header h2 {
+  margin: 0;
+
+  color: #1e293b;
+
+  font-size: 1.45rem;
+
+  font-weight: 800;
+}
+
+
+.recommendation-modal-header h2 i {
+  color: #7c3aed;
+}
+
+
+.recommendation-modal-header p {
+  margin: 5px 0 0;
+
+  color: #64748b;
+
+  font-size: 0.9rem;
+}
+
+
+/* Modal close button */
+.recommendation-modal-close {
+  width: 42px;
+  height: 42px;
+
+  flex-shrink: 0;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border: none;
+
+  border-radius: 50%;
+
+  background: #f1f5f9;
+
+  color: #475569;
+
+  font-size: 1rem;
+
+  cursor: pointer;
+
+  transition:
+    background 0.25s ease,
+    color 0.25s ease,
+    transform 0.25s ease;
+}
+
+
+.recommendation-modal-close:hover {
+  background: #fee2e2;
+
+  color: #dc2626;
+
+  transform: rotate(90deg);
+}
+
+
+/* =========================================================
+   MODAL IMAGE GALLERY
+========================================================= */
+
+.recommendation-modal-gallery {
+  display: grid;
+
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  gap: 22px;
+
+  padding: 28px;
+}
+
+
+.recommendation-modal-image {
+  position: relative;
+
+  width: 100%;
+
+  aspect-ratio: 16 / 9;
+
+  overflow: hidden;
+
+  border-radius: 16px;
+
+  background: #f8fafc;
+
+  border: 1px solid #e2e8f0;
+
+  cursor: zoom-in;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+
+.recommendation-modal-image:hover {
+  transform: translateY(-5px);
+
+  box-shadow:
+    0 12px 30px rgba(76, 29, 149, 0.15);
+}
+
+
+.recommendation-modal-image img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: contain;
+
+  display: block;
+
+  transition: transform 0.4s ease;
+}
+
+
+.recommendation-modal-image:hover img {
+  transform: scale(1.025);
+}
+
+
+/* =========================================================
+   MODAL IMAGE HOVER OVERLAY
+========================================================= */
+
+.modal-image-overlay {
+  position: absolute;
+
+  inset: 0;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 8px;
+
+  background: rgba(76, 29, 149, 0.45);
+
+  color: #ffffff;
+
+  opacity: 0;
+
+  transition: opacity 0.3s ease;
+}
+
+
+.recommendation-modal-image:hover .modal-image-overlay {
+  opacity: 1;
+}
+
+
+.modal-image-overlay i {
+  width: 48px;
+  height: 48px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.95);
+
+  color: #7c3aed;
+
+  font-size: 1.1rem;
+}
+
+
+.modal-image-overlay span {
+  font-size: 0.9rem;
+
+  font-weight: 700;
+}
+
+
+/* =========================================================
+   FULLSCREEN IMAGE VIEWER
+========================================================= */
+
+.recommendation-fullscreen {
+  position: fixed;
+
+  inset: 0;
+
+  z-index: 10000;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 50px;
+
+  background: rgba(2, 6, 23, 0.97);
+
+  animation: recommendationFullscreenIn 0.25s ease;
+}
+
+
+/* Fullscreen recommendation image */
+.recommendation-full-image {
+  max-width: 92vw;
+
+  max-height: 88vh;
+
+  width: auto;
+  height: auto;
+
+  object-fit: contain;
+
+  border-radius: 8px;
+
+  box-shadow:
+    0 20px 60px rgba(0, 0, 0, 0.5);
+
+  user-select: none;
+}
+
+
+/* =========================================================
+   FULLSCREEN NAVIGATION BUTTONS
+========================================================= */
+
+.recommendation-nav {
+  position: fixed;
+
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  width: 52px;
+  height: 52px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border: none;
+
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.12);
+
+  color: #ffffff;
+
+  font-size: 1.2rem;
+
+  cursor: pointer;
+
+  backdrop-filter: blur(8px);
+
+  -webkit-backdrop-filter: blur(8px);
+
+  transition:
+    background 0.25s ease,
+    transform 0.25s ease;
+}
+
+
+.recommendation-nav:hover {
+  background: rgba(124, 58, 237, 0.85);
+}
+
+
+.recommendation-prev {
+  left: 25px;
+}
+
+
+.recommendation-next {
+  right: 25px;
+}
+
+
+.recommendation-prev:hover {
+  transform: translateY(-50%) translateX(-3px);
+}
+
+
+.recommendation-next:hover {
+  transform: translateY(-50%) translateX(3px);
+}
+
+
+/* =========================================================
+   FULLSCREEN CLOSE BUTTON
+========================================================= */
+
+.recommendation-close {
+  position: fixed;
+
+  top: 20px;
+  right: 25px;
+
+  width: 46px;
+  height: 46px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border: none;
+
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.12);
+
+  color: #ffffff;
+
+  font-size: 1.2rem;
+
+  cursor: pointer;
+
+  backdrop-filter: blur(8px);
+
+  -webkit-backdrop-filter: blur(8px);
+
+  transition:
+    background 0.25s ease,
+    transform 0.25s ease;
+}
+
+
+.recommendation-close:hover {
+  background: #db2777;
+
+  transform: rotate(90deg);
+}
+
+
+/* =========================================================
+   MODAL SCROLLBAR
+========================================================= */
+
+.recommendation-modal::-webkit-scrollbar {
+  width: 8px;
+}
+
+
+.recommendation-modal::-webkit-scrollbar-track {
+  background: #f8fafc;
+}
+
+
+.recommendation-modal::-webkit-scrollbar-thumb {
+  background: #c4b5fd;
+
+  border-radius: 20px;
+}
+
+
+.recommendation-modal::-webkit-scrollbar-thumb:hover {
+  background: #8b5cf6;
+}
+
+
+/* =========================================================
+   ANIMATIONS
+========================================================= */
+
+@keyframes recommendationFadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+
+@keyframes recommendationModalIn {
+  from {
+    opacity: 0;
+
+    transform: scale(0.94) translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+
+    transform: scale(1) translateY(0);
+  }
+}
+
+
+@keyframes recommendationFullscreenIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 991px) {
+
+  .recommendation-section {
+    padding: 65px 0;
+  }
+
+  .recommendation-title {
+    font-size: 2.25rem;
+  }
+
+  .recommendation-modal {
+    max-width: 92vw;
+  }
+
+  .recommendation-modal-gallery {
+    gap: 18px;
+
+    padding: 22px;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 767px) {
+
+  .recommendation-section {
+    padding: 55px 0;
+  }
+
+
+  .recommendation-title {
+    font-size: 2rem;
+  }
+
+
+  .recommendation-subtitle {
+    padding: 0 15px;
+
+    font-size: 0.95rem;
+  }
+
+
+  .recommendation-label {
+    font-size: 0.72rem;
+
+    padding: 7px 14px;
+
+    letter-spacing: 0.8px;
+  }
+
+
+  /* One image per row in modal */
+  .recommendation-modal-gallery {
+    grid-template-columns: 1fr;
+
+    gap: 16px;
+
+    padding: 18px;
+  }
+
+
+  .recommendation-modal {
+    max-height: 88vh;
+
+    border-radius: 18px;
+  }
+
+
+  .recommendation-modal-header {
+    padding: 18px 18px;
+  }
+
+
+  .recommendation-modal-header h2 {
+    font-size: 1.15rem;
+  }
+
+
+  .recommendation-modal-header p {
+    font-size: 0.78rem;
+  }
+
+
+  .recommendation-modal-close {
+    width: 38px;
+    height: 38px;
+  }
+
+
+  /* Fullscreen */
+  .recommendation-fullscreen {
+    padding: 25px 15px;
+  }
+
+
+  .recommendation-full-image {
+    max-width: 94vw;
+
+    max-height: 82vh;
+
+    border-radius: 5px;
+  }
+
+
+  /* Smaller navigation */
+  .recommendation-nav {
+    width: 42px;
+    height: 42px;
+
+    font-size: 0.95rem;
+  }
+
+
+  .recommendation-prev {
+    left: 10px;
+  }
+
+
+  .recommendation-next {
+    right: 10px;
+  }
+
+
+  .recommendation-close {
+    top: 12px;
+    right: 12px;
+
+    width: 40px;
+    height: 40px;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+  .recommendation-title {
+    font-size: 1.75rem;
+  }
+
+
+  .recommendation-card {
+    border-radius: 16px;
+  }
+
+
+  .recommendation-footer {
+    padding: 13px 15px;
+
+    font-size: 0.82rem;
+  }
+
+
+  .show-more-recommendation {
+    padding: 11px 19px;
+
+    font-size: 0.82rem;
+  }
+
+
+  .recommendation-modal-gallery {
+    padding: 14px;
+  }
+
+
+  .recommendation-modal-image {
+    border-radius: 12px;
+  }
+
+}

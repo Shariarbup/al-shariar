@@ -5,6 +5,7 @@ import { Skill } from '../model/Skill';
 import { Project } from '../model/Project';
 import { Work } from '../model/Work';
 import { Certificate } from '../model/Certificate';
+import { Recommendation } from '../model/Recommendation';
 
 
 @Injectable({
@@ -32,6 +33,10 @@ export class PortfolioServiceService {
 
   getCertificateData(){
     return this.http.get<Certificate[]>("assets/json/certificate.json");
+  }
+
+  getRecommendationData(){
+    return this.http.get<Recommendation[]>("assets/json/recommendation.json");
   }
 
   register(userData: any){
